@@ -1,23 +1,33 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data;
+using System.Windows.Forms;
+using System.ComponentModel;
 
-public struct Date
+struct Date
 {
-    public int Day, Month,Year;
+    int Day, Month,Year;
 };
-
 namespace GYM_Project
 {
     class Member
     {
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-O1FM280\SQLEXPRESS;Initial Catalog=Gym;Integrated Security=True ");
+        SqlCommand cmd;
+
+        //public Full_Name Name { get; set; }
+        //public int M_ID { get; set; }
+        //public int   Term { get; set; }
+        //public Date Start_date { get; set; }
+        //public DateTime Expir { get; set; }
+        //public int Phone { get; set; }
+        //public int Freeze { get; set; }
+        //public int Invitation { get; set; }
         public int M_ID { get; set; }
         public Date Expir { get; set; }
         public int Start_day { get; set; }
@@ -27,32 +37,10 @@ namespace GYM_Project
         public int Freeze { get; set; }
         public int Invitation { get; set; }
         public string end_date { get; set; }
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-O1FM280\SQLEXPRESS;Initial Catalog=Gym;Integrated Security=True");
-        SqlCommand cmd;
 
-        public void Insert_new(string insert_name, string Term, int Start_day, int Start_mon, int Start_year, String phone)//Collectes & Inserts Data Into DB
+
+        public void Insert_new(string name,int Id,int term,Date date,int phone)//Collectes & Inserts Data Into DB
         {
-            Add_member add = new Add_member();
-
-            Date date;
-            //the end date
-            date.Day = Add_member.d;
-            date.Month = Add_member.editedmon;
-            date.Year = Add_member.y;
-            ///////////////
-         
-            Freeze = Add_member.f;
-            Invitation = Add_member.invite;
-            end_date = Add_member.end_d;
-           DialogResult result = MessageBox.Show("Do you want to confirm your subscription for Mr:"+  insert_name + " ??" ,"" , MessageBoxButtons.YesNo , MessageBoxIcon.Question);
-           if (result==DialogResult.Yes)
-           {
-              cmd = new SqlCommand("insert into member(Name,Term,Phone,Start_day,Start_month,Start_year,end_date,End_day,End_month,End_year,Freeze,invite,count)values (N'" + insert_name + "',N'" + Term + "',N'" + phone + "','" + Start_day + "','" + Start_mon + "','" + Start_year + "','" + end_date + "','" + date.Day + "','" + date.Month + "','" + date.Year + "','" + Freeze + "','" + Invitation + "','" + Add_member.count + "')", con);
-               con.Open();
-               cmd.ExecuteNonQuery();
-               con.Close();
-               MessageBox.Show("Data is recorded for Mr : " + insert_name + "  :)" + '\n' + "End date is : " + end_date + '\n' + "Invitaions : " + Invitation + "            Freeze : " + Freeze, "Done :)", MessageBoxButtons.OK);
-           }
         }
 
         public void Check(int Id)//checkes if ID is existed & if membership is available
@@ -68,8 +56,8 @@ namespace GYM_Project
                 year = Convert.ToInt32(RD["End_year"].ToString());
 
 
-                DateTime End = new DateTime(year, day, month);
-                if (DateTime.Today <= End)
+                DateTime End=new DateTime(year,day,month);
+                if (DateTime.Today<= End)
                     MessageBox.Show("Loged In Successfully !", "Succeeded !", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 else
                 {
@@ -82,11 +70,14 @@ namespace GYM_Project
 
             con.Close();
         }
+
+
+
         public void search_ID(int Id)//searches for some ID
         {
 
         }
-        public void search_Name(String name)//searches for some Name
+        public void search_Name(string name)//searches for some Name
         {
 
         }

@@ -13,3 +13,4 @@ D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.
 D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Admin_Settings.resources
 D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Main_Form.resources
 D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Enter_pass.resources
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Add_member.resources

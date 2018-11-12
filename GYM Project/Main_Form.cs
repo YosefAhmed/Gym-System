@@ -31,7 +31,8 @@ namespace GYM_Project
 
         private void new_btn_Click(object sender, EventArgs e)
         {
-
+            Add_member add = new Add_member();
+            add.Show();
         }
     }
 }

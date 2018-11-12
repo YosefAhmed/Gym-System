@@ -71,7 +71,6 @@
             this.main_Form1.Name = "main_Form1";
             this.main_Form1.Size = new System.Drawing.Size(811, 369);
             this.main_Form1.TabIndex = 4;
-            this.main_Form1.Load += new System.EventHandler(this.main_Form1_Load);
             // 
             // enter_pass1
             // 
