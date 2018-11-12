@@ -50,11 +50,41 @@
     <Compile Include="Admin_Login.Designer.cs">
       <DependentUpon>Admin_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin_Settings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin_Settings.Designer.cs">
+      <DependentUpon>Admin_Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="All_Members.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="All_Members.Designer.cs">
+      <DependentUpon>All_Members.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enter_pass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Enter_pass.Designer.cs">
+      <DependentUpon>Enter_pass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Main_Form.Designer.cs">
+      <DependentUpon>Main_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Member.cs" />
     <Compile Include="Program.cs" />
@@ -62,8 +92,23 @@
     <EmbeddedResource Include="Admin_Login.resx">
       <DependentUpon>Admin_Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Settings.resx">
+      <DependentUpon>Admin_Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="All_Members.resx">
+      <DependentUpon>All_Members.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Enter_pass.resx">
+      <DependentUpon>Enter_pass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form.resx">
+      <DependentUpon>Main_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

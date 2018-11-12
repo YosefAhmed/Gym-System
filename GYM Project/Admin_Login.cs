@@ -23,7 +23,7 @@ namespace GYM_Project
             if (username_txt.Text == "123" && Password_txt.Text == "123")
             {
                 F.Show();
-        
+                this.Hide();            
             }
             else
                 Wrong_lbl.Text = "* Wrong Username Or Password, Please Try Again !! *";

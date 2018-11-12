@@ -7,3 +7,9 @@ D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\bin\Debug\GYM Project.
 D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM Project.exe
 D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM Project.pdb
 D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Admin_Login.resources
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM Project.csprojResolveAssemblyReference.cache
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.All_Members.resources
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Login.resources
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Admin_Settings.resources
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Main_Form.resources
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Enter_pass.resources

@@ -28,104 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.new_btn = new System.Windows.Forms.Button();
-            this.member_btn = new System.Windows.Forms.Button();
-            this.renew_btn = new System.Windows.Forms.Button();
-            this.search_txt = new System.Windows.Forms.TextBox();
-            this.search_lbl = new System.Windows.Forms.Label();
-            this.search_id_btn = new System.Windows.Forms.Button();
-            this.search_name_btn = new System.Windows.Forms.Button();
+            this.Settings_btn = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Back_btn = new System.Windows.Forms.Button();
+            this.main_Form1 = new GYM_Project.Main_Form();
+            this.enter_pass1 = new GYM_Project.Enter_pass();
+            this.admin_Settings1 = new GYM_Project.Admin_Settings();
             this.SuspendLayout();
             // 
-            // new_btn
+            // Settings_btn
             // 
-            this.new_btn.Location = new System.Drawing.Point(57, 134);
-            this.new_btn.Name = "new_btn";
-            this.new_btn.Size = new System.Drawing.Size(192, 118);
-            this.new_btn.TabIndex = 0;
-            this.new_btn.Text = "New Member";
-            this.new_btn.UseVisualStyleBackColor = true;
+            this.Settings_btn.Location = new System.Drawing.Point(12, 386);
+            this.Settings_btn.Name = "Settings_btn";
+            this.Settings_btn.Size = new System.Drawing.Size(115, 23);
+            this.Settings_btn.TabIndex = 5;
+            this.Settings_btn.Text = "Admin Settings";
+            this.Settings_btn.UseVisualStyleBackColor = true;
+            this.Settings_btn.Click += new System.EventHandler(this.Settings_btn_Click);
             // 
-            // member_btn
+            // button2
             // 
-            this.member_btn.Location = new System.Drawing.Point(314, 134);
-            this.member_btn.Name = "member_btn";
-            this.member_btn.Size = new System.Drawing.Size(192, 118);
-            this.member_btn.TabIndex = 1;
-            this.member_btn.Text = "Member";
-            this.member_btn.UseVisualStyleBackColor = true;
+            this.button2.Location = new System.Drawing.Point(16, 16);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(0, 0);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // renew_btn
+            // Back_btn
             // 
-            this.renew_btn.Location = new System.Drawing.Point(568, 134);
-            this.renew_btn.Name = "renew_btn";
-            this.renew_btn.Size = new System.Drawing.Size(192, 118);
-            this.renew_btn.TabIndex = 2;
-            this.renew_btn.Text = "Renew";
-            this.renew_btn.UseVisualStyleBackColor = true;
+            this.Back_btn.Location = new System.Drawing.Point(713, 0);
+            this.Back_btn.Name = "Back_btn";
+            this.Back_btn.Size = new System.Drawing.Size(89, 42);
+            this.Back_btn.TabIndex = 9;
+            this.Back_btn.Text = "Back";
+            this.Back_btn.UseVisualStyleBackColor = true;
+            this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
             // 
-            // search_txt
+            // main_Form1
             // 
-            this.search_txt.Location = new System.Drawing.Point(298, 12);
-            this.search_txt.Name = "search_txt";
-            this.search_txt.Size = new System.Drawing.Size(224, 20);
-            this.search_txt.TabIndex = 3;
+            this.main_Form1.Location = new System.Drawing.Point(3, 0);
+            this.main_Form1.Name = "main_Form1";
+            this.main_Form1.Size = new System.Drawing.Size(811, 369);
+            this.main_Form1.TabIndex = 4;
+            this.main_Form1.Load += new System.EventHandler(this.main_Form1_Load);
             // 
-            // search_lbl
+            // enter_pass1
             // 
-            this.search_lbl.AutoSize = true;
-            this.search_lbl.Location = new System.Drawing.Point(147, 15);
-            this.search_lbl.Name = "search_lbl";
-            this.search_lbl.Size = new System.Drawing.Size(145, 13);
-            this.search_lbl.TabIndex = 4;
-            this.search_lbl.Text = "Enter ID Or Name You Wont ";
+            this.enter_pass1.Location = new System.Drawing.Point(0, 0);
+            this.enter_pass1.Name = "enter_pass1";
+            this.enter_pass1.Size = new System.Drawing.Size(811, 350);
+            this.enter_pass1.TabIndex = 10;
             // 
-            // search_id_btn
+            // admin_Settings1
             // 
-            this.search_id_btn.Location = new System.Drawing.Point(293, 40);
-            this.search_id_btn.Name = "search_id_btn";
-            this.search_id_btn.Size = new System.Drawing.Size(104, 25);
-            this.search_id_btn.TabIndex = 5;
-            this.search_id_btn.Text = "search with id";
-            this.search_id_btn.UseVisualStyleBackColor = true;
-            // 
-            // search_name_btn
-            // 
-            this.search_name_btn.Location = new System.Drawing.Point(403, 40);
-            this.search_name_btn.Name = "search_name_btn";
-            this.search_name_btn.Size = new System.Drawing.Size(119, 25);
-            this.search_name_btn.TabIndex = 6;
-            this.search_name_btn.Text = "search with Name";
-            this.search_name_btn.UseVisualStyleBackColor = true;
+            this.admin_Settings1.Location = new System.Drawing.Point(0, 0);
+            this.admin_Settings1.Name = "admin_Settings1";
+            this.admin_Settings1.Size = new System.Drawing.Size(814, 414);
+            this.admin_Settings1.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 430);
-            this.Controls.Add(this.search_name_btn);
-            this.Controls.Add(this.search_id_btn);
-            this.Controls.Add(this.search_lbl);
-            this.Controls.Add(this.search_txt);
-            this.Controls.Add(this.renew_btn);
-            this.Controls.Add(this.member_btn);
-            this.Controls.Add(this.new_btn);
+            this.ClientSize = new System.Drawing.Size(814, 421);
+            this.Controls.Add(this.main_Form1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Settings_btn);
+            this.Controls.Add(this.Back_btn);
+            this.Controls.Add(this.enter_pass1);
+            this.Controls.Add(this.admin_Settings1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button new_btn;
-        private System.Windows.Forms.Button member_btn;
-        private System.Windows.Forms.Button renew_btn;
-        private System.Windows.Forms.TextBox search_txt;
-        private System.Windows.Forms.Label search_lbl;
-        private System.Windows.Forms.Button search_id_btn;
-        private System.Windows.Forms.Button search_name_btn;
+        private Admin_Settings admin_Settings1;
+        private Main_Form main_Form1;
+        private  System.Windows.Forms.Button Settings_btn;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Back_btn;
+        private Enter_pass enter_pass1;
     }
 }
 
