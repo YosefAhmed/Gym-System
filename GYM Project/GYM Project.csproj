@@ -95,6 +95,12 @@
     <Compile Include="Member.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renewform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Renewform.Designer.cs">
+      <DependentUpon>Renewform.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Add_member.resx">
       <DependentUpon>Add_member.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +135,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Renewform.resx">
+      <DependentUpon>Renewform.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

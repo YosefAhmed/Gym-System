@@ -25,7 +25,7 @@ namespace GYM_Project
         public static int id;
         public static string phone;
 
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-O1FM280\SQLEXPRESS;Initial Catalog=Gym;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=Yousef;Initial Catalog=Gym_;Integrated Security=True");
 
         private void Add_member_Load(object sender, EventArgs e)
         {
@@ -69,32 +69,39 @@ namespace GYM_Project
             }
 
         }
+        //////////////// variables for calc end with freeze 
         public static int d;
         public int m;
         public static int y;
         public static int editedmon;
-
         public static string end_d;
-
-        public void calc_end(string day,int mon,string year)
+        ///////////////Variables for calc end without freeze
+        public static int df;
+        public static int mf;
+        public static int yf;
+        public static string end_date_outfr;
+        public void calc_renew(string day,int mon,string year)//calc end date with freeze
         {
             editedmon = mon;
             d = Convert.ToInt32(day);
             y = Convert.ToInt32(year);
+            mf = editedmon;
+            df = d;
+            yf = y;
             //dah l 4hr
             if (ishr.Checked)
             {
                 if (editedmon == 12)
                 {
                     editedmon = 1;
-                    //d = Convert.ToInt32(iday.Text);
+                    mf = 1;
+                    yf++;
                     y++;
                 }
                 else
                 {
                     editedmon += 1;
-                    //d = Convert.ToInt32(iday.Text);
-                    //y = Convert.ToInt32(isna.Text);
+                    mf++;
                 }
             }
             ///////////////////////////////////////////////
@@ -104,60 +111,70 @@ namespace GYM_Project
                 if (editedmon < 9 && Convert.ToInt32(iday.Text) <= 16)
                 {
                     editedmon += 3;
+                    mf += 3;
                     d += 15;
                    // y = Convert.ToInt32(isna.Text);
                 }
                 else if (editedmon < 9 && Convert.ToInt32(iday.Text) > 16)
                 {
                     editedmon += 4;
+                    mf += 3;
                     d = d - 15;
                     //y = Convert.ToInt32(isna.Text);
                 }
                 else if (editedmon == 9 && Convert.ToInt32(iday.Text) <= 16)
                 {
                     editedmon += 3;
+                    mf += 3;
                     d += 15;
                    // y = Convert.ToInt32(isna.Text);
                 }
                 else if (editedmon == 9 && Convert.ToInt32(iday.Text) > 16)
                 {
                     editedmon = 1;
+                    mf += 3;
                     d =d- 15;
                     y = y + 1;
                 }
                 else if (editedmon == 10 && Convert.ToInt32(iday.Text) <= 16)
                 {
                     editedmon = 1;
+                    mf = 1;
                     d = d + 15;
                     y = y + 1;
                 }
                 else if (editedmon == 10 && Convert.ToInt32(iday.Text) > 16)
                 {
                     editedmon = 2;
+                    mf = 1;
                     d = d - 15;
                     y = y + 1;
                 }
                 else if (editedmon == 11 && Convert.ToInt32(iday.Text) <= 16)
                 {
                     editedmon = 2;
+                    mf = 2;
                     d = d + 15;
                     y = y + 1;
                 }
                 else if (editedmon == 11 && Convert.ToInt32(iday.Text) > 16)
                 {
                     editedmon = 3;
+                    mf = 2;
                     d = d- 15;
                     y = y+ 1;
                 }
                 else if (editedmon == 12 && Convert.ToInt32(iday.Text) <= 16)
                 {
                     editedmon = 3;
+                    mf = 3;
                     d = d + 15;
                     y = y + 1;
                 }
                 else if (editedmon == 12 && Convert.ToInt32(iday.Text) > 16)
                 {
                     editedmon = 4;
+                    mf += 3;
                     d = d- 15;
                     y = y+ 1;
                 }
@@ -169,49 +186,54 @@ namespace GYM_Project
                 if (editedmon <= 5)
                 {
                     editedmon += 7;
-                    //d = Convert.ToInt32(iday.Text);
-                    //y = Convert.ToInt32(isna.Text);
+                    mf += 6;
                 }
                 else if (editedmon == 6)
                 {
                     editedmon = 1;
-                   // d = Convert.ToInt32(iday.Text);
+                    mf = 12;
                     y = y + 1;
                 }
                 else if (editedmon == 7)
                 {
                     editedmon = 2;
-                   // d = Convert.ToInt32(iday.Text);
+                    mf=1;
+                    yf++;
                     y = y + 1;
                 }
                 else if (editedmon == 8)
                 {
                     editedmon = 3;
-                    //d = Convert.ToInt32(iday.Text);
+                    mf = 2;
+                    yf++;
                     y = y + 1;
                 }
                 else if (editedmon == 9)
                 {
                     editedmon = 4;
-                   // d = Convert.ToInt32(iday.Text);
+                    mf = 3;
+                    yf++;
                     y = y + 1;
                 }
                 else if (editedmon == 10)
                 {
                     editedmon = 5;
-                    //d = Convert.ToInt32(iday.Text);
+                    mf = 4;
+                    yf++;
                     y = y + 1;
                 }
                 else if (editedmon == 11)
                 {
                     editedmon = 6;
-                   // d = Convert.ToInt32(iday.Text);
+                    mf = 5;
+                    yf++;
                     y =y+ 1;
                 }
                 else if (editedmon == 12)
                 {
                     editedmon = 7;
-                   // d = Convert.ToInt32(iday.Text);
+                    mf = 6;
+                    yf++;
                     y = y+ 1;
                 }
             }
@@ -222,24 +244,27 @@ namespace GYM_Project
                 if (editedmon == 11)
                 {
                     editedmon = 1;
-                    //d = Convert.ToInt32(iday.Text);
+                    mf = 11;
+                    yf++;
                     y = y + 2;
                 }
                 else if (editedmon == 12)
                 {
                     editedmon = 2;
-                   // d = Convert.ToInt32(iday.Text);
+                    yf = 12;
+                    yf++;
                     y = y + 2;
                 }
                 else
                 {
 
                     editedmon += 2;
-                    //d = Convert.ToInt32(iday.Text);
+                    yf++;
                     y = y + 1;
                 }
             }
             end_d = d.ToString() + "/" + editedmon.ToString() + "/" + y.ToString();
+            end_date_outfr = df.ToString() + "/" + mf.ToString() + "/" + yf.ToString();
         }
         public static string term;
         public static int f;
@@ -257,7 +282,7 @@ namespace GYM_Project
                 name = in_name.Text;
                 //id = Convert.ToInt32(in_id.Text);
                 phone = in_pho.Text;
-                calc_end(iday.Text, Convert.ToInt32(imonth.Text), iyear.Text);
+                calc_renew(iday.Text, Convert.ToInt32(imonth.Text), iyear.Text);
 
                 if (ishr.Checked == true)
                 {
@@ -292,7 +317,7 @@ namespace GYM_Project
                 d.Month = Convert.ToInt32(imonth.Text);
                 d.Year = Convert.ToInt32(iyear.Text);
                 m.Insert_new(in_name.Text, term, d.Day, d.Month, d.Year, in_pho.Text);
-
+                this.Close();
             }
         }
             private void iyear_Click(object sender, EventArgs e)
@@ -325,12 +350,23 @@ namespace GYM_Project
                 { MAX = g; }
             }
 
-            con.Close();
+
             dr.Close();
+             con.Close();
             if (MAX == 0)
-            { in_id.Text = "1"; }
+            { in_id.Text = "1000"; }
             else
                 in_id.Text = (MAX + 1).ToString();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in_id_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }

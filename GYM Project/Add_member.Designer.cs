@@ -93,6 +93,7 @@
             this.in_id.TabIndex = 2;
             this.in_id.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.in_id.Click += new System.EventHandler(this.in_id_Click);
+            this.in_id.TextChanged += new System.EventHandler(this.in_id_TextChanged);
             // 
             // phlbl
             // 
@@ -130,7 +131,7 @@
             this.label19.BackColor = System.Drawing.Color.White;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(245, 201);
+            this.label19.Location = new System.Drawing.Point(245, 202);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(40, 22);
             this.label19.TabIndex = 89;
@@ -140,11 +141,11 @@
             // label20
             // 
             this.label20.BackColor = System.Drawing.Color.White;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Black;
             this.label20.Location = new System.Drawing.Point(166, 201);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(43, 22);
+            this.label20.Size = new System.Drawing.Size(39, 23);
             this.label20.TabIndex = 88;
             this.label20.Text = "Day";
             this.label20.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -273,12 +274,13 @@
             this.groupBox1.Controls.Add(this.i3shr);
             this.groupBox1.Controls.Add(this.ishr);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(30, 253);
+            this.groupBox1.Location = new System.Drawing.Point(30, 255);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(138, 164);
             this.groupBox1.TabIndex = 93;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Length";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // isna
             // 
