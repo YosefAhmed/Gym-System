@@ -86,6 +86,7 @@ namespace GYM_Project
                     editedmon = 1;
                     mf += 3;
                     d = d - 15;
+                    yf++;
                     y = y + 1;
                 }
                 else if (editedmon == 10 && Convert.ToInt32(d) <= 16)
@@ -93,6 +94,7 @@ namespace GYM_Project
                     editedmon = 1;
                     mf = 1;
                     d = d + 15;
+                    yf++;
                     y = y + 1;
                 }
                 else if (editedmon == 10 && Convert.ToInt32(d) > 16)
@@ -100,6 +102,7 @@ namespace GYM_Project
                     editedmon = 2;
                     mf = 1;
                     d = d - 15;
+                    yf++;
                     y = y + 1;
                 }
                 else if (editedmon == 11 && Convert.ToInt32(d) <= 16)
@@ -107,13 +110,15 @@ namespace GYM_Project
                     editedmon = 2;
                     mf = 2;
                     d = d + 15;
+                    yf++;
                     y = y + 1;
                 }
                 else if (editedmon == 11 && Convert.ToInt32(d) > 16)
                 {
                     editedmon = 3;
                     mf = 2;
-                    d = d - 15;
+                    d = d - 15; 
+                    yf++;
                     y = y + 1;
                 }
                 else if (editedmon == 12 && Convert.ToInt32(d) <= 16)
@@ -121,6 +126,7 @@ namespace GYM_Project
                     editedmon = 3;
                     mf = 3;
                     d = d + 15;
+                    yf++;
                     y = y + 1;
                 }
                 else if (editedmon == 12 && Convert.ToInt32(d) > 16)
@@ -128,6 +134,7 @@ namespace GYM_Project
                     editedmon = 4;
                     mf += 3;
                     d = d - 15;
+                    yf++;
                     y = y + 1;
                 }
             }
@@ -215,7 +222,7 @@ namespace GYM_Project
                     y = y + 1;
                 }
             }
-            end_d = d.ToString() + "/" + editedmon.ToString() + "/" + y.ToString();
+            end_d = df.ToString() + "/" + mf.ToString() + "/" + yf.ToString();
             end_date_outfr = df.ToString() + "/" + mf.ToString() + "/" + yf.ToString();
            
             }
@@ -255,7 +262,7 @@ namespace GYM_Project
                 count = 365;
             }
             Member me = new Member();
-            me.renew(Convert.ToInt32(in_id.Text), term, d, editedmon, y, end_d, end_date_outfr, f, invite, count);
+            me.renew(Convert.ToInt32(in_id.Text), term, df, mf, yf, end_d, end_date_outfr, f, invite, count);
             this.Close();
         }
     }

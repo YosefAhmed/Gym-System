@@ -134,6 +134,7 @@ namespace GYM_Project
                     editedmon = 1;
                     mf += 3;
                     d =d- 15;
+                    yf++;
                     y = y + 1;
                 }
                 else if (editedmon == 10 && Convert.ToInt32(iday.Text) <= 16)
@@ -141,6 +142,7 @@ namespace GYM_Project
                     editedmon = 1;
                     mf = 1;
                     d = d + 15;
+                    yf++;
                     y = y + 1;
                 }
                 else if (editedmon == 10 && Convert.ToInt32(iday.Text) > 16)
@@ -148,6 +150,7 @@ namespace GYM_Project
                     editedmon = 2;
                     mf = 1;
                     d = d - 15;
+                    yf++;
                     y = y + 1;
                 }
                 else if (editedmon == 11 && Convert.ToInt32(iday.Text) <= 16)
@@ -155,6 +158,7 @@ namespace GYM_Project
                     editedmon = 2;
                     mf = 2;
                     d = d + 15;
+                    yf++;
                     y = y + 1;
                 }
                 else if (editedmon == 11 && Convert.ToInt32(iday.Text) > 16)
@@ -162,6 +166,7 @@ namespace GYM_Project
                     editedmon = 3;
                     mf = 2;
                     d = d- 15;
+                    yf++;
                     y = y+ 1;
                 }
                 else if (editedmon == 12 && Convert.ToInt32(iday.Text) <= 16)
@@ -169,6 +174,7 @@ namespace GYM_Project
                     editedmon = 3;
                     mf = 3;
                     d = d + 15;
+                    yf++;
                     y = y + 1;
                 }
                 else if (editedmon == 12 && Convert.ToInt32(iday.Text) > 16)
@@ -176,6 +182,7 @@ namespace GYM_Project
                     editedmon = 4;
                     mf += 3;
                     d = d- 15;
+                    yf++;
                     y = y+ 1;
                 }
             }

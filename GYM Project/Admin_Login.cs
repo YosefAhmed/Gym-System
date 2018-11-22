@@ -28,5 +28,10 @@ namespace GYM_Project
             else
                 Wrong_lbl.Text = "* Wrong Username Or Password, Please Try Again !! *";
         }
+
+        private void Admin_Login_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("Please Be Sure To Set The Time In Your Computer To Avoid Data Recording Errors !!\n \nمن فضلك تأكد من ضبط الوقت والتاريخ  في جهازك تجنباً لأخطاء حفظ البيانات !! ","Attention !!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+        }
     }
 }

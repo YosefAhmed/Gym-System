@@ -56,9 +56,8 @@
             // 
             this.in_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.in_name.Location = new System.Drawing.Point(146, 33);
-            this.in_name.Multiline = true;
             this.in_name.Name = "in_name";
-            this.in_name.Size = new System.Drawing.Size(258, 35);
+            this.in_name.Size = new System.Drawing.Size(258, 31);
             this.in_name.TabIndex = 0;
             // 
             // namelbl
@@ -86,10 +85,9 @@
             this.in_id.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.in_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.in_id.Location = new System.Drawing.Point(147, 91);
-            this.in_id.Multiline = true;
             this.in_id.Name = "in_id";
             this.in_id.ReadOnly = true;
-            this.in_id.Size = new System.Drawing.Size(257, 35);
+            this.in_id.Size = new System.Drawing.Size(257, 31);
             this.in_id.TabIndex = 2;
             this.in_id.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.in_id.Click += new System.EventHandler(this.in_id_Click);
@@ -109,9 +107,8 @@
             // 
             this.in_pho.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.in_pho.Location = new System.Drawing.Point(145, 145);
-            this.in_pho.Multiline = true;
             this.in_pho.Name = "in_pho";
-            this.in_pho.Size = new System.Drawing.Size(258, 35);
+            this.in_pho.Size = new System.Drawing.Size(258, 31);
             this.in_pho.TabIndex = 4;
             // 
             // label18
@@ -131,9 +128,9 @@
             this.label19.BackColor = System.Drawing.Color.White;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(245, 202);
+            this.label19.Location = new System.Drawing.Point(249, 203);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(40, 22);
+            this.label19.Size = new System.Drawing.Size(40, 19);
             this.label19.TabIndex = 89;
             this.label19.Text = "Mon";
             this.label19.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -143,9 +140,9 @@
             this.label20.BackColor = System.Drawing.Color.White;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(166, 201);
+            this.label20.Location = new System.Drawing.Point(166, 203);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(39, 23);
+            this.label20.Size = new System.Drawing.Size(42, 18);
             this.label20.TabIndex = 88;
             this.label20.Text = "Day";
             this.label20.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -260,9 +257,8 @@
             // 
             this.pricetxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pricetxt.Location = new System.Drawing.Point(640, 12);
-            this.pricetxt.Multiline = true;
             this.pricetxt.Name = "pricetxt";
-            this.pricetxt.Size = new System.Drawing.Size(143, 35);
+            this.pricetxt.Size = new System.Drawing.Size(143, 31);
             this.pricetxt.TabIndex = 92;
             this.pricetxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -359,6 +355,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GYM_Project.Properties.Resources.fitness1;
             this.ClientSize = new System.Drawing.Size(795, 456);
+            this.Controls.Add(this.label20);
             this.Controls.Add(this.confirmbtn);
             this.Controls.Add(this.calcbtn);
             this.Controls.Add(this.groupBox1);
@@ -366,16 +363,15 @@
             this.Controls.Add(this.sdatelbl);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.label20);
             this.Controls.Add(this.imonth);
             this.Controls.Add(this.iyear);
-            this.Controls.Add(this.iday);
             this.Controls.Add(this.in_id);
             this.Controls.Add(this.phlbl);
             this.Controls.Add(this.in_pho);
             this.Controls.Add(this.idlbl);
             this.Controls.Add(this.namelbl);
             this.Controls.Add(this.in_name);
+            this.Controls.Add(this.iday);
             this.Name = "Add_member";
             this.Text = "Add_member";
             this.Load += new System.EventHandler(this.Add_member_Load);

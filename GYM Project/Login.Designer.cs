@@ -35,11 +35,15 @@
             this.Freeze_btn = new System.Windows.Forms.Button();
             this.Freeze_txt = new System.Windows.Forms.TextBox();
             this.Conferm_freez_btn = new System.Windows.Forms.Button();
+            this.Stop_freeze_btn = new System.Windows.Forms.Button();
+            this.interval_lbl = new System.Windows.Forms.Label();
+            this.Freezed_lbl = new System.Windows.Forms.Label();
+            this.Freezed_txt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ID_txt
             // 
-            this.ID_txt.Location = new System.Drawing.Point(102, 68);
+            this.ID_txt.Location = new System.Drawing.Point(136, 84);
             this.ID_txt.Name = "ID_txt";
             this.ID_txt.Size = new System.Drawing.Size(197, 20);
             this.ID_txt.TabIndex = 0;
@@ -48,7 +52,7 @@
             // 
             this.ID_lbl.AutoSize = true;
             this.ID_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID_lbl.Location = new System.Drawing.Point(60, 67);
+            this.ID_lbl.Location = new System.Drawing.Point(94, 83);
             this.ID_lbl.Name = "ID_lbl";
             this.ID_lbl.Size = new System.Drawing.Size(26, 20);
             this.ID_lbl.TabIndex = 1;
@@ -56,7 +60,7 @@
             // 
             // Login_btn
             // 
-            this.Login_btn.Location = new System.Drawing.Point(124, 109);
+            this.Login_btn.Location = new System.Drawing.Point(158, 125);
             this.Login_btn.Name = "Login_btn";
             this.Login_btn.Size = new System.Drawing.Size(142, 40);
             this.Login_btn.TabIndex = 2;
@@ -66,19 +70,19 @@
             // 
             // Login_invite
             // 
-            this.Login_invite.Location = new System.Drawing.Point(316, 207);
+            this.Login_invite.Location = new System.Drawing.Point(354, 233);
             this.Login_invite.Name = "Login_invite";
-            this.Login_invite.Size = new System.Drawing.Size(71, 40);
+            this.Login_invite.Size = new System.Drawing.Size(95, 66);
             this.Login_invite.TabIndex = 3;
             this.Login_invite.Text = "Invite";
             this.Login_invite.UseVisualStyleBackColor = true;
-            this.Login_invite.Click += new System.EventHandler(this.button1_Click);
+            this.Login_invite.Click += new System.EventHandler(this.Login_invite_Click);
             // 
             // Freeze_btn
             // 
-            this.Freeze_btn.Location = new System.Drawing.Point(15, 207);
+            this.Freeze_btn.Location = new System.Drawing.Point(12, 233);
             this.Freeze_btn.Name = "Freeze_btn";
-            this.Freeze_btn.Size = new System.Drawing.Size(71, 40);
+            this.Freeze_btn.Size = new System.Drawing.Size(90, 66);
             this.Freeze_btn.TabIndex = 4;
             this.Freeze_btn.Text = "Freeze";
             this.Freeze_btn.UseVisualStyleBackColor = true;
@@ -86,14 +90,14 @@
             // 
             // Freeze_txt
             // 
-            this.Freeze_txt.Location = new System.Drawing.Point(102, 218);
+            this.Freeze_txt.Location = new System.Drawing.Point(225, 233);
             this.Freeze_txt.Name = "Freeze_txt";
             this.Freeze_txt.Size = new System.Drawing.Size(94, 20);
             this.Freeze_txt.TabIndex = 5;
             // 
             // Conferm_freez_btn
             // 
-            this.Conferm_freez_btn.Location = new System.Drawing.Point(15, 207);
+            this.Conferm_freez_btn.Location = new System.Drawing.Point(20, 211);
             this.Conferm_freez_btn.Name = "Conferm_freez_btn";
             this.Conferm_freez_btn.Size = new System.Drawing.Size(71, 40);
             this.Conferm_freez_btn.TabIndex = 6;
@@ -101,11 +105,52 @@
             this.Conferm_freez_btn.UseVisualStyleBackColor = true;
             this.Conferm_freez_btn.Click += new System.EventHandler(this.Conferm_freez_btn_Click);
             // 
+            // Stop_freeze_btn
+            // 
+            this.Stop_freeze_btn.Location = new System.Drawing.Point(20, 273);
+            this.Stop_freeze_btn.Name = "Stop_freeze_btn";
+            this.Stop_freeze_btn.Size = new System.Drawing.Size(71, 40);
+            this.Stop_freeze_btn.TabIndex = 7;
+            this.Stop_freeze_btn.Text = "Stop Freeze";
+            this.Stop_freeze_btn.UseVisualStyleBackColor = true;
+            this.Stop_freeze_btn.Click += new System.EventHandler(this.Stop_freeze_btn_Click);
+            // 
+            // interval_lbl
+            // 
+            this.interval_lbl.AutoSize = true;
+            this.interval_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.interval_lbl.Location = new System.Drawing.Point(97, 235);
+            this.interval_lbl.Name = "interval_lbl";
+            this.interval_lbl.Size = new System.Drawing.Size(112, 16);
+            this.interval_lbl.TabIndex = 8;
+            this.interval_lbl.Text = "Interval Of Freeze";
+            // 
+            // Freezed_lbl
+            // 
+            this.Freezed_lbl.AutoSize = true;
+            this.Freezed_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Freezed_lbl.Location = new System.Drawing.Point(95, 285);
+            this.Freezed_lbl.Name = "Freezed_lbl";
+            this.Freezed_lbl.Size = new System.Drawing.Size(104, 16);
+            this.Freezed_lbl.TabIndex = 9;
+            this.Freezed_lbl.Text = "Interval Freezed";
+            // 
+            // Freezed_txt
+            // 
+            this.Freezed_txt.Location = new System.Drawing.Point(225, 284);
+            this.Freezed_txt.Name = "Freezed_txt";
+            this.Freezed_txt.Size = new System.Drawing.Size(94, 20);
+            this.Freezed_txt.TabIndex = 10;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 259);
+            this.ClientSize = new System.Drawing.Size(461, 325);
+            this.Controls.Add(this.Freezed_txt);
+            this.Controls.Add(this.Freezed_lbl);
+            this.Controls.Add(this.interval_lbl);
+            this.Controls.Add(this.Stop_freeze_btn);
             this.Controls.Add(this.Conferm_freez_btn);
             this.Controls.Add(this.Freeze_txt);
             this.Controls.Add(this.Freeze_btn);
@@ -130,5 +175,9 @@
         private System.Windows.Forms.Button Freeze_btn;
         private System.Windows.Forms.TextBox Freeze_txt;
         private System.Windows.Forms.Button Conferm_freez_btn;
+        private System.Windows.Forms.Button Stop_freeze_btn;
+        private System.Windows.Forms.Label interval_lbl;
+        private System.Windows.Forms.Label Freezed_lbl;
+        private System.Windows.Forms.TextBox Freezed_txt;
     }
 }
