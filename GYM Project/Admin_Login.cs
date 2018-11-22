@@ -20,10 +20,12 @@ namespace GYM_Project
         private void Admin_Login_btn_Click(object sender, EventArgs e)
         {
             Main F = new Main();
-            if (username_txt.Text == "123" && Password_txt.Text == "123")
+            Member M = new Member();
+            if (M.check_admin(username_txt.Text,Password_txt.Text))
             {
                 F.Show();
-                this.Hide();            
+                this.Hide();         
+                
             }
             else
                 Wrong_lbl.Text = "* Wrong Username Or Password, Please Try Again !! *";

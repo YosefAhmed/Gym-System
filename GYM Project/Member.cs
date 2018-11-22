@@ -321,5 +321,30 @@ namespace GYM_Project
 
 
         }
+        public bool check_admin(string name, string pass)
+        {
+            con.Open();
+            cmd = new SqlCommand("select * from Admin_login where Admin_ID='" + name + "'", con);
+            SqlDataReader RD = cmd.ExecuteReader();
+
+
+            if (RD.Read())
+            {
+                string pas = RD["Admin_Pass"].ToString();
+                if (pass == pas)
+                {
+                    return true;
+                }
+                else
+                    return false;
+
+
+            }
+            else 
+                return false;
+
+            con.Close();
+        
+        }
     }
 }

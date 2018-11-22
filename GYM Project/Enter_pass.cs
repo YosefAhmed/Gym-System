@@ -19,16 +19,15 @@ namespace GYM_Project
         public bool flag = false;
         private void OK_btn_Click(object sender, EventArgs e)
         {
-            if (pass_txt.Text == "123")
+            Member M = new Member();
+            if (M.check_admin(username_txt.Text, pass_txt.Text))
             {
                 flag = true;
                 pass_txt.Text = null;
                 this.Hide();
             }
             else
-            {
-                MessageBox.Show("Wrong Password !", "", MessageBoxButtons.OK, MessageBoxIcon.Error); 
-            }
+                Error_msg_lbl.Text = "* Wrong Username Or Password, Please Try Again !! *";
         }
     }
 }

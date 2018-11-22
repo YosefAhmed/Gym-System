@@ -22,7 +22,7 @@ namespace GYM_Project
 
         private void Save_btn_Click(object sender, EventArgs e)
         {
-            cmd = new SqlCommand("insert into Admin (Admin_ID, Admin_Pass, Price_1Y, Price_6M, Price_3M, Price_1M)values(123,123,'" + Year_txt.Text + "','" + Six_M_txt.Text + "','" + three_M_txt.Text + "','" + one_M_txt.Text + "')", con);
+            cmd = new SqlCommand("insert into Price (Price_1Y, Price_6M, Price_3M, Price_1M)values('" + Year_txt.Text + "','" + Six_M_txt.Text + "','" + three_M_txt.Text + "','" + one_M_txt.Text + "')", con);
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();

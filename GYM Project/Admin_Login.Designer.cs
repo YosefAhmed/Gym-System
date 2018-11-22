@@ -84,9 +84,9 @@
             this.Wrong_lbl.AutoSize = true;
             this.Wrong_lbl.Location = new System.Drawing.Point(44, 211);
             this.Wrong_lbl.Name = "Wrong_lbl";
-            this.Wrong_lbl.Size = new System.Drawing.Size(128, 13);
+            this.Wrong_lbl.Size = new System.Drawing.Size(10, 13);
             this.Wrong_lbl.TabIndex = 5;
-            this.Wrong_lbl.Text = "(Wrong usernam or pass )";
+            this.Wrong_lbl.Text = ".";
             // 
             // Admin_Login
             // 
