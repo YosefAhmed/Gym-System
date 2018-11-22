@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GYM_Project
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
-        public Form1()
+        public Main()
         {
             InitializeComponent();
         }
@@ -22,17 +22,9 @@ namespace GYM_Project
             Application.Exit();
         }
 
-        private void member_btn_Click(object sender, EventArgs e)
-        {
-            Login L = new Login();
-            L.Show();
-        }
 
-        private void All_btn_Click(object sender, EventArgs e)
-        {
-            All_Members A = new All_Members();
-            A.Show();
-        }
+
+
 
         private void Settings_btn_Click(object sender, EventArgs e)
         {
@@ -46,6 +38,8 @@ namespace GYM_Project
             this.main_Form1.Show();
             this.Settings_btn.Show();
         }
+
+
 
 
 

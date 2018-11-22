@@ -19,7 +19,7 @@ namespace GYM_Project
 
         private void Admin_Login_btn_Click(object sender, EventArgs e)
         {
-            Form1 F = new Form1();
+            Main F = new Main();
             if (username_txt.Text == "123" && Password_txt.Text == "123")
             {
                 F.Show();

@@ -23,9 +23,9 @@ namespace GYM_Project
             L.Show();
         }
 
-        private void All_btn_Click(object sender, EventArgs e)
+        private void Search_btn_Click(object sender, EventArgs e)
         {
-            All_Members A = new All_Members();
+            Search_Form A = new Search_Form();
             A.Show();
         }
 

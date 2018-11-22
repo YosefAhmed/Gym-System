@@ -62,23 +62,17 @@
     <Compile Include="Admin_Settings.Designer.cs">
       <DependentUpon>Admin_Settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="All_Members.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="All_Members.Designer.cs">
-      <DependentUpon>All_Members.cs</DependentUpon>
-    </Compile>
     <Compile Include="Enter_pass.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Enter_pass.Designer.cs">
       <DependentUpon>Enter_pass.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -101,6 +95,18 @@
     <Compile Include="Renewform.Designer.cs">
       <DependentUpon>Renewform.cs</DependentUpon>
     </Compile>
+    <Compile Include="search.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="search.designer.cs">
+      <DependentUpon>search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search_Form.Designer.cs">
+      <DependentUpon>Search_Form.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Add_member.resx">
       <DependentUpon>Add_member.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,14 +116,11 @@
     <EmbeddedResource Include="Admin_Settings.resx">
       <DependentUpon>Admin_Settings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="All_Members.resx">
-      <DependentUpon>All_Members.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Enter_pass.resx">
       <DependentUpon>Enter_pass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -137,6 +140,12 @@
     </Compile>
     <EmbeddedResource Include="Renewform.resx">
       <DependentUpon>Renewform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="search.resx">
+      <DependentUpon>search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search_Form.resx">
+      <DependentUpon>Search_Form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

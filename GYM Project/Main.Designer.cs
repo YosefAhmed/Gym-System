@@ -1,6 +1,6 @@
 ﻿namespace GYM_Project
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -86,7 +86,7 @@
             this.admin_Settings1.Size = new System.Drawing.Size(814, 414);
             this.admin_Settings1.TabIndex = 3;
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -97,9 +97,10 @@
             this.Controls.Add(this.Back_btn);
             this.Controls.Add(this.enter_pass1);
             this.Controls.Add(this.admin_Settings1);
-            this.Name = "Form1";
+            this.Name = "Main";
             this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+
             this.ResumeLayout(false);
 
         }

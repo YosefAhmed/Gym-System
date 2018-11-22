@@ -26,7 +26,7 @@ namespace GYM_Project
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
-            Form1 F = new Form1();
+            Main F = new Main();
             F.Show();
             ParentForm.Hide();
         }

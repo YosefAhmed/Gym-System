@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.All_btn = new System.Windows.Forms.Button();
+            this.Search_btn = new System.Windows.Forms.Button();
             this.member_btn = new System.Windows.Forms.Button();
             this.new_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // All_btn
+            // Search_btn
             // 
-            this.All_btn.Location = new System.Drawing.Point(565, 141);
-            this.All_btn.Name = "All_btn";
-            this.All_btn.Size = new System.Drawing.Size(192, 118);
-            this.All_btn.TabIndex = 5;
-            this.All_btn.Text = "All Members";
-            this.All_btn.UseVisualStyleBackColor = true;
-            this.All_btn.Click += new System.EventHandler(this.All_btn_Click);
+            this.Search_btn.Location = new System.Drawing.Point(565, 141);
+            this.Search_btn.Name = "Search_btn";
+            this.Search_btn.Size = new System.Drawing.Size(192, 118);
+            this.Search_btn.TabIndex = 5;
+            this.Search_btn.Text = "Search";
+            this.Search_btn.UseVisualStyleBackColor = true;
+            this.Search_btn.Click += new System.EventHandler(this.Search_btn_Click);
             // 
             // member_btn
             // 
@@ -67,7 +67,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.All_btn);
+            this.Controls.Add(this.Search_btn);
             this.Controls.Add(this.member_btn);
             this.Controls.Add(this.new_btn);
             this.Name = "Main_Form";
@@ -78,7 +78,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button All_btn;
+        private System.Windows.Forms.Button Search_btn;
         private System.Windows.Forms.Button member_btn;
         private System.Windows.Forms.Button new_btn;
     }
