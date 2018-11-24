@@ -39,10 +39,14 @@ namespace GYM_Project
             this.Settings_btn.Show();
         }
 
+        private void main_Form1_Load(object sender, EventArgs e)
+        {
 
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 }

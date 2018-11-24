@@ -13,7 +13,7 @@ namespace GYM_Project
 {
     public partial class search : UserControl
     {
-        SqlConnection con = new SqlConnection(@"Data Source=MOSTAFA\SQLEXPRESS;Initial Catalog=test 1 gym;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-5JMJ2DN\SQLEXPRESS;Initial Catalog=test 1 gym;Integrated Security=True");
         SqlDataAdapter Da;
         DataSet Ds = new DataSet();
         SqlCommand cmd;

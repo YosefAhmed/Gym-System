@@ -34,5 +34,10 @@ namespace GYM_Project
             Add_member add = new Add_member();
             add.Show();
         }
+
+        private void Main_Form_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

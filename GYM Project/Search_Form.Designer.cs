@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.search_id_btn = new System.Windows.Forms.Button();
-            this.search_name = new System.Windows.Forms.Button();
+            this.search_btn = new System.Windows.Forms.Button();
             this.search_txt = new System.Windows.Forms.TextBox();
             this.Data_view = new System.Windows.Forms.DataGridView();
             this.search1 = new GYM_Project.search();
@@ -38,29 +37,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.Data_view)).BeginInit();
             this.SuspendLayout();
             // 
-            // search_id_btn
+            // search_btn
             // 
-            this.search_id_btn.Location = new System.Drawing.Point(470, 39);
-            this.search_id_btn.Name = "search_id_btn";
-            this.search_id_btn.Size = new System.Drawing.Size(77, 50);
-            this.search_id_btn.TabIndex = 1;
-            this.search_id_btn.Text = "Search With ID ";
-            this.search_id_btn.UseVisualStyleBackColor = true;
-            this.search_id_btn.Click += new System.EventHandler(this.search_id_btn_Click);
-            // 
-            // search_name
-            // 
-            this.search_name.Location = new System.Drawing.Point(570, 39);
-            this.search_name.Name = "search_name";
-            this.search_name.Size = new System.Drawing.Size(77, 50);
-            this.search_name.TabIndex = 1;
-            this.search_name.Text = "Search With Name ";
-            this.search_name.UseVisualStyleBackColor = true;
-            this.search_name.Click += new System.EventHandler(this.search_name_Click);
+            this.search_btn.Location = new System.Drawing.Point(610, 35);
+            this.search_btn.Name = "search_btn";
+            this.search_btn.Size = new System.Drawing.Size(63, 32);
+            this.search_btn.TabIndex = 1;
+            this.search_btn.Text = "Search ";
+            this.search_btn.UseVisualStyleBackColor = true;
+            this.search_btn.Click += new System.EventHandler(this.search_btn_Click);
             // 
             // search_txt
             // 
-            this.search_txt.Location = new System.Drawing.Point(454, 9);
+            this.search_txt.Location = new System.Drawing.Point(457, 9);
             this.search_txt.Name = "search_txt";
             this.search_txt.Size = new System.Drawing.Size(216, 20);
             this.search_txt.TabIndex = 2;
@@ -86,7 +75,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(316, 12);
+            this.label1.Location = new System.Drawing.Point(319, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 13);
             this.label1.TabIndex = 4;
@@ -111,11 +100,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Data_view);
             this.Controls.Add(this.search_txt);
-            this.Controls.Add(this.search_name);
-            this.Controls.Add(this.search_id_btn);
+            this.Controls.Add(this.search_btn);
             this.Controls.Add(this.search1);
             this.Name = "Search_Form";
             this.Text = "Search_Form";
+            this.Load += new System.EventHandler(this.Search_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Data_view)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -125,8 +114,7 @@
         #endregion
 
         private search search1;
-        private System.Windows.Forms.Button search_id_btn;
-        private System.Windows.Forms.Button search_name;
+        private System.Windows.Forms.Button search_btn;
         private System.Windows.Forms.TextBox search_txt;
         private System.Windows.Forms.DataGridView Data_view;
         private System.Windows.Forms.Label label1;

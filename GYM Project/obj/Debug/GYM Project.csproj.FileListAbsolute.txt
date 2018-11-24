@@ -50,3 +50,42 @@ D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM Project.
 D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Main.resources
 D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.search.resources
 D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Search_Form.resources
+C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\bin\Debug\GYM Project.exe.config
+C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\bin\Debug\GYM Project.exe
+C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\bin\Debug\GYM Project.pdb
+C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\obj\Debug\GYM Project.csprojResolveAssemblyReference.cache
+C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Add_member.resources
+C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Admin_Login.resources
+C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Admin_Settings.resources
+C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Enter_pass.resources
+C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Main.resources
+C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Login.resources
+C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Main_Form.resources
+C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Properties.Resources.resources
+C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Renewform.resources
+C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\obj\Debug\GYM_Project.search.resources
+C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Search_Form.resources
+C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\obj\Debug\GYM Project.csproj.GenerateResource.Cache
+C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\obj\Debug\GYM Project.exe
+C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\obj\Debug\GYM Project.pdb
+C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Admin_accounts.resources
+D:\projects\Limitless Fitness Gym\GYM (medo)\Gym-System-master\GYM Project\bin\Debug\GYM Project.exe.config
+D:\projects\Limitless Fitness Gym\GYM (medo)\Gym-System-master\GYM Project\obj\Debug\GYM Project.exe
+D:\projects\Limitless Fitness Gym\GYM (medo)\Gym-System-master\GYM Project\obj\Debug\GYM Project.pdb
+D:\projects\Limitless Fitness Gym\GYM (medo)\Gym-System-master\GYM Project\bin\Debug\GYM Project.exe
+D:\projects\Limitless Fitness Gym\GYM (medo)\Gym-System-master\GYM Project\bin\Debug\GYM Project.pdb
+D:\projects\Limitless Fitness Gym\GYM (medo)\Gym-System-master\GYM Project\obj\Debug\GYM Project.csprojResolveAssemblyReference.cache
+D:\projects\Limitless Fitness Gym\GYM (medo)\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Add_member.resources
+D:\projects\Limitless Fitness Gym\GYM (medo)\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Admin_accounts.resources
+D:\projects\Limitless Fitness Gym\GYM (medo)\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Admin_Login.resources
+D:\projects\Limitless Fitness Gym\GYM (medo)\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Admin_Settings.resources
+D:\projects\Limitless Fitness Gym\GYM (medo)\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Enter_pass.resources
+D:\projects\Limitless Fitness Gym\GYM (medo)\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Main.resources
+D:\projects\Limitless Fitness Gym\GYM (medo)\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Login.resources
+D:\projects\Limitless Fitness Gym\GYM (medo)\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Main_Form.resources
+D:\projects\Limitless Fitness Gym\GYM (medo)\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Properties.Resources.resources
+D:\projects\Limitless Fitness Gym\GYM (medo)\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Renewform.resources
+D:\projects\Limitless Fitness Gym\GYM (medo)\Gym-System-master\GYM Project\obj\Debug\GYM_Project.search.resources
+D:\projects\Limitless Fitness Gym\GYM (medo)\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Search_Form.resources
+D:\projects\Limitless Fitness Gym\GYM (medo)\Gym-System-master\GYM Project\obj\Debug\GYM Project.csproj.GenerateResource.Cache
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Admin_accounts.resources

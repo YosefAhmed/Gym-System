@@ -72,6 +72,7 @@
             this.Controls.Add(this.new_btn);
             this.Name = "Main_Form";
             this.Size = new System.Drawing.Size(811, 350);
+            this.Load += new System.EventHandler(this.Main_Form_Load);
             this.ResumeLayout(false);
 
         }

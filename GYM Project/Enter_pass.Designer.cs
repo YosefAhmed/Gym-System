@@ -110,7 +110,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Enter_pass_lbl);
             this.Name = "Enter_pass";
-            this.Size = new System.Drawing.Size(811, 350);
+            this.Size = new System.Drawing.Size(783, 350);
             this.ResumeLayout(false);
             this.PerformLayout();
 

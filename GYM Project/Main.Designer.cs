@@ -34,6 +34,7 @@
             this.main_Form1 = new GYM_Project.Main_Form();
             this.enter_pass1 = new GYM_Project.Enter_pass();
             this.admin_Settings1 = new GYM_Project.Admin_Settings();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Settings_btn
@@ -71,6 +72,7 @@
             this.main_Form1.Name = "main_Form1";
             this.main_Form1.Size = new System.Drawing.Size(811, 369);
             this.main_Form1.TabIndex = 4;
+            this.main_Form1.Load += new System.EventHandler(this.main_Form1_Load);
             // 
             // enter_pass1
             // 
@@ -86,11 +88,22 @@
             this.admin_Settings1.Size = new System.Drawing.Size(814, 414);
             this.admin_Settings1.TabIndex = 3;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(687, 386);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Admin accounts";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 421);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.main_Form1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Settings_btn);
@@ -100,7 +113,6 @@
             this.Name = "Main";
             this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
-
             this.ResumeLayout(false);
 
         }
@@ -113,6 +125,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button Back_btn;
         private Enter_pass enter_pass1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
