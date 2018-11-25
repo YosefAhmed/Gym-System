@@ -48,5 +48,15 @@ namespace GYM_Project
         {
 
         }
+
+        private void admin_Settings1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

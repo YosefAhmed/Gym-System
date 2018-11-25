@@ -28,15 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_member));
             this.in_name = new System.Windows.Forms.TextBox();
             this.namelbl = new System.Windows.Forms.Label();
             this.idlbl = new System.Windows.Forms.Label();
             this.in_id = new System.Windows.Forms.TextBox();
             this.phlbl = new System.Windows.Forms.Label();
             this.in_pho = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.imonth = new System.Windows.Forms.ComboBox();
             this.iyear = new System.Windows.Forms.ComboBox();
             this.iday = new System.Windows.Forms.ComboBox();
@@ -49,6 +47,9 @@
             this.ishr = new System.Windows.Forms.RadioButton();
             this.calcbtn = new System.Windows.Forms.Button();
             this.confirmbtn = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +65,7 @@
             // 
             this.namelbl.BackColor = System.Drawing.Color.Transparent;
             this.namelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.namelbl.ForeColor = System.Drawing.Color.OldLace;
             this.namelbl.Location = new System.Drawing.Point(24, 33);
             this.namelbl.Name = "namelbl";
             this.namelbl.Size = new System.Drawing.Size(105, 35);
@@ -74,6 +76,7 @@
             // 
             this.idlbl.BackColor = System.Drawing.Color.Transparent;
             this.idlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idlbl.ForeColor = System.Drawing.Color.OldLace;
             this.idlbl.Location = new System.Drawing.Point(61, 91);
             this.idlbl.Name = "idlbl";
             this.idlbl.Size = new System.Drawing.Size(60, 35);
@@ -97,6 +100,7 @@
             // 
             this.phlbl.BackColor = System.Drawing.Color.Transparent;
             this.phlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phlbl.ForeColor = System.Drawing.Color.OldLace;
             this.phlbl.Location = new System.Drawing.Point(24, 145);
             this.phlbl.Name = "phlbl";
             this.phlbl.Size = new System.Drawing.Size(114, 35);
@@ -110,42 +114,6 @@
             this.in_pho.Name = "in_pho";
             this.in_pho.Size = new System.Drawing.Size(258, 31);
             this.in_pho.TabIndex = 4;
-            // 
-            // label18
-            // 
-            this.label18.BackColor = System.Drawing.Color.White;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(323, 201);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(49, 22);
-            this.label18.TabIndex = 90;
-            this.label18.Text = "Year";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label19
-            // 
-            this.label19.BackColor = System.Drawing.Color.White;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(249, 203);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(40, 19);
-            this.label19.TabIndex = 89;
-            this.label19.Text = "Mon";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label20
-            // 
-            this.label20.BackColor = System.Drawing.Color.White;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(166, 203);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(42, 18);
-            this.label20.TabIndex = 88;
-            this.label20.Text = "Day";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // imonth
             // 
@@ -166,7 +134,7 @@
             "10",
             "11",
             "12"});
-            this.imonth.Location = new System.Drawing.Point(248, 201);
+            this.imonth.Location = new System.Drawing.Point(243, 213);
             this.imonth.Name = "imonth";
             this.imonth.Size = new System.Drawing.Size(62, 23);
             this.imonth.TabIndex = 85;
@@ -193,7 +161,7 @@
             "2019",
             "2018",
             "2017"});
-            this.iyear.Location = new System.Drawing.Point(323, 200);
+            this.iyear.Location = new System.Drawing.Point(317, 213);
             this.iyear.Name = "iyear";
             this.iyear.Size = new System.Drawing.Size(66, 23);
             this.iyear.TabIndex = 86;
@@ -206,6 +174,7 @@
             this.iday.ForeColor = System.Drawing.Color.Black;
             this.iday.FormattingEnabled = true;
             this.iday.Items.AddRange(new object[] {
+            "Day",
             "1",
             "2",
             "3",
@@ -237,7 +206,7 @@
             "29",
             "30",
             "31"});
-            this.iday.Location = new System.Drawing.Point(166, 201);
+            this.iday.Location = new System.Drawing.Point(172, 213);
             this.iday.Name = "iday";
             this.iday.Size = new System.Drawing.Size(60, 23);
             this.iday.TabIndex = 87;
@@ -247,6 +216,7 @@
             // 
             this.sdatelbl.BackColor = System.Drawing.Color.Transparent;
             this.sdatelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdatelbl.ForeColor = System.Drawing.Color.OldLace;
             this.sdatelbl.Location = new System.Drawing.Point(20, 194);
             this.sdatelbl.Name = "sdatelbl";
             this.sdatelbl.Size = new System.Drawing.Size(148, 35);
@@ -329,31 +299,79 @@
             // 
             // calcbtn
             // 
-            this.calcbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calcbtn.BackColor = System.Drawing.Color.Yellow;
+            this.calcbtn.FlatAppearance.BorderColor = System.Drawing.Color.OldLace;
+            this.calcbtn.FlatAppearance.BorderSize = 3;
+            this.calcbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
+            this.calcbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
+            this.calcbtn.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calcbtn.Location = new System.Drawing.Point(670, 53);
             this.calcbtn.Name = "calcbtn";
             this.calcbtn.Size = new System.Drawing.Size(90, 38);
             this.calcbtn.TabIndex = 94;
             this.calcbtn.Text = "Calculate";
-            this.calcbtn.UseVisualStyleBackColor = true;
+            this.calcbtn.UseVisualStyleBackColor = false;
             this.calcbtn.Click += new System.EventHandler(this.calcbtn_Click);
             // 
             // confirmbtn
             // 
-            this.confirmbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmbtn.BackColor = System.Drawing.Color.Yellow;
+            this.confirmbtn.FlatAppearance.BorderColor = System.Drawing.Color.OldLace;
+            this.confirmbtn.FlatAppearance.BorderSize = 3;
+            this.confirmbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
+            this.confirmbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
+            this.confirmbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.confirmbtn.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmbtn.Location = new System.Drawing.Point(353, 381);
             this.confirmbtn.Name = "confirmbtn";
             this.confirmbtn.Size = new System.Drawing.Size(105, 38);
             this.confirmbtn.TabIndex = 95;
             this.confirmbtn.Text = "Confirm";
-            this.confirmbtn.UseVisualStyleBackColor = true;
+            this.confirmbtn.UseVisualStyleBackColor = false;
             this.confirmbtn.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label18
+            // 
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.OldLace;
+            this.label18.Location = new System.Drawing.Point(328, 191);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(49, 22);
+            this.label18.TabIndex = 90;
+            this.label18.Text = "Year";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label19
+            // 
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.OldLace;
+            this.label19.Location = new System.Drawing.Point(256, 190);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(40, 19);
+            this.label19.TabIndex = 89;
+            this.label19.Text = "Mon";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label20
+            // 
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.OldLace;
+            this.label20.Location = new System.Drawing.Point(181, 192);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(42, 18);
+            this.label20.TabIndex = 88;
+            this.label20.Text = "Day";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Add_member
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::GYM_Project.Properties.Resources.fitness1;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(795, 456);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.confirmbtn);
@@ -372,6 +390,7 @@
             this.Controls.Add(this.namelbl);
             this.Controls.Add(this.in_name);
             this.Controls.Add(this.iday);
+            this.DoubleBuffered = true;
             this.Name = "Add_member";
             this.Text = "Add_member";
             this.Load += new System.EventHandler(this.Add_member_Load);
@@ -390,9 +409,6 @@
         private System.Windows.Forms.TextBox in_id;
         private System.Windows.Forms.Label phlbl;
         private System.Windows.Forms.TextBox in_pho;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.ComboBox imonth;
         private System.Windows.Forms.ComboBox iyear;
         private System.Windows.Forms.ComboBox iday;
@@ -405,5 +421,8 @@
         private System.Windows.Forms.RadioButton i3shr;
         private System.Windows.Forms.Button calcbtn;
         private System.Windows.Forms.Button confirmbtn;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
     }
 }

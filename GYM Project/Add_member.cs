@@ -17,6 +17,7 @@ namespace GYM_Project
         {
             InitializeComponent();
         }
+      
         public struct Date
         {
             public int Day, Month, Year;
@@ -29,43 +30,21 @@ namespace GYM_Project
 
         private void Add_member_Load(object sender, EventArgs e)
         {
-
+            iday.Text = "Day";
+            imonth.Text= "Mon";
+            iyear.Text = "Year";
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-
-            public int calc;
         private void calcbtn_Click(object sender, EventArgs e)
         {
-            if (pricetxt.Text == "")
+            if(ishr.Checked)
             {
-                ishr.Focus();
-            }
-            else
-            {
-                calc = Convert.ToInt32(pricetxt.Text);
-                if (ishr.Checked == true)
-                {
-                    pricetxt.Text = calc.ToString();
-                }
-                else if (i3shr.Checked == true)
-                {
-                    calc = calc * 3;
-                    pricetxt.Text = calc.ToString();
-                }
-                else if (i6shr.Checked == true)
-                {
-                    calc = calc * 6;
-                    pricetxt.Text = calc.ToString();
-                }
-                else if (isna.Checked == true)
-                {
-                    calc = calc * 12;
-                    pricetxt.Text = calc.ToString();
-                }
+                con.Open();
+                
             }
 
         }
@@ -94,6 +73,7 @@ namespace GYM_Project
             //dah l 6 4hor
             if (i6shr.Checked)
             {
+                
                 TimeSpan T = TimeSpan.FromDays(180);
                 DateTime ed = d.Add(T);
                 edate = ed.ToShortDateString();
@@ -163,17 +143,17 @@ namespace GYM_Project
         }
             private void iyear_Click(object sender, EventArgs e)
             {
-                label18.Hide();
+                
             }
 
             private void imonth_Click(object sender, EventArgs e)
             {
-                label19.Hide();
+                
             }
 
             private void iday_Click(object sender, EventArgs e)
             {
-                label20.Hide();
+                
             }
         public int MAX;
         private void in_id_Click(object sender, EventArgs e)

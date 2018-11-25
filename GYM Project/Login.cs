@@ -111,6 +111,36 @@ namespace GYM_Project
                 Freeze_btn.Show();
             }
         }
+
+        private void ID_txt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ID_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Freeze_txt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void interval_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Freezed_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Freezed_txt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
         
     }
 }

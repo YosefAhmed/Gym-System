@@ -56,14 +56,16 @@ namespace GYM_Project
             if (!RD.Read())
             {
                 MessageBox.Show("Member Not Exist !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                con.Close();
                 return false;
             }
 
             else
             {
+                con.Close();
                 return true;
             }
-            con.Close();
+          
         }
         public bool Check_exist_name(string name)
         {
@@ -74,14 +76,16 @@ namespace GYM_Project
             if (!RD.Read())
             {
                 MessageBox.Show("Member Not Exist !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                con.Close();
                 return false;
             }
 
             else
             {
+                con.Close();
                 return true;
             }
-            con.Close();
+         
         }
         public static int re_id;
         public void Check(int Id)//checkes if ID is existed & if membership is available
@@ -135,6 +139,7 @@ namespace GYM_Project
                 MessageBox.Show("Member Not Exist !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             con.Close();
+            RD.Close();
         }
         public string m_id;
         public string m_name;
@@ -146,9 +151,10 @@ namespace GYM_Project
             SqlCommand cmd;
             SqlDataReader dr;
             cmd = new SqlCommand("select * from member where ID='" + Id + "'or Name='"+Id+"'", con);
+            con.Close();
             con.Open();
             dr = cmd.ExecuteReader();
-            if (dr.Read())
+            while (dr.Read())
             {
                 //Here we are putting data readed from DB into the members of the class to call it in the search form
                 m_id = dr["ID"].ToString();
@@ -335,7 +341,7 @@ namespace GYM_Project
 
                 SqlCommand cmd = new SqlCommand("DELETE FROM member where Name='" + name + "' ", con);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("the Memmber deleted Successfully!");
+                MessageBox.Show("the Member deleted Successfully!");
 
                 con.Close();
             }
@@ -354,18 +360,29 @@ namespace GYM_Project
                 string pas = RD["Admin_Pass"].ToString();
                 if (pass == pas)
                 {
+                    RD.Close();
+                    con.Close();
                     return true;
                 }
                 else
+                {
+                    RD.Close();
+                    con.Close();
                     return false;
+                }
 
 
             }
-            else 
+            else
+            {
+                RD.Close();
+                con.Close();
                 return false;
-
-            con.Close();
+            }
+            
+          
         
         }
+     
     }
 }

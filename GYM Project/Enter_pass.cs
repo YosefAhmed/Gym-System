@@ -19,6 +19,7 @@ namespace GYM_Project
         public bool flag = false;
         private void OK_btn_Click(object sender, EventArgs e)
         {
+
             Member M = new Member();
             if (M.check_admin(username_txt.Text, pass_txt.Text))
             {
@@ -28,6 +29,11 @@ namespace GYM_Project
             }
             else
                 Error_msg_lbl.Text = "* Wrong Username Or Password, Please Try Again !! *";
+        }
+
+        private void Enter_pass_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

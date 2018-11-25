@@ -41,82 +41,99 @@
             // 
             // Year_txt
             // 
-            this.Year_txt.Location = new System.Drawing.Point(96, 119);
+            this.Year_txt.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Year_txt.Location = new System.Drawing.Point(21, 139);
             this.Year_txt.Name = "Year_txt";
-            this.Year_txt.Size = new System.Drawing.Size(100, 20);
+            this.Year_txt.Size = new System.Drawing.Size(135, 27);
             this.Year_txt.TabIndex = 0;
             // 
             // Six_M_txt
             // 
-            this.Six_M_txt.Location = new System.Drawing.Point(262, 119);
+            this.Six_M_txt.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Six_M_txt.Location = new System.Drawing.Point(211, 139);
             this.Six_M_txt.Name = "Six_M_txt";
-            this.Six_M_txt.Size = new System.Drawing.Size(100, 20);
+            this.Six_M_txt.Size = new System.Drawing.Size(159, 27);
             this.Six_M_txt.TabIndex = 1;
             // 
             // three_M_txt
             // 
-            this.three_M_txt.Location = new System.Drawing.Point(434, 119);
+            this.three_M_txt.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.three_M_txt.Location = new System.Drawing.Point(426, 139);
             this.three_M_txt.Name = "three_M_txt";
-            this.three_M_txt.Size = new System.Drawing.Size(100, 20);
+            this.three_M_txt.Size = new System.Drawing.Size(159, 27);
             this.three_M_txt.TabIndex = 2;
             // 
             // one_M_txt
             // 
-            this.one_M_txt.Location = new System.Drawing.Point(605, 119);
+            this.one_M_txt.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.one_M_txt.Location = new System.Drawing.Point(616, 139);
             this.one_M_txt.Name = "one_M_txt";
-            this.one_M_txt.Size = new System.Drawing.Size(100, 20);
+            this.one_M_txt.Size = new System.Drawing.Size(157, 27);
             this.one_M_txt.TabIndex = 3;
             // 
             // year_lbl
             // 
             this.year_lbl.AutoSize = true;
-            this.year_lbl.Location = new System.Drawing.Point(109, 86);
+            this.year_lbl.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.year_lbl.ForeColor = System.Drawing.Color.Gold;
+            this.year_lbl.Location = new System.Drawing.Point(27, 106);
             this.year_lbl.Name = "year_lbl";
-            this.year_lbl.Size = new System.Drawing.Size(70, 13);
+            this.year_lbl.Size = new System.Drawing.Size(116, 19);
             this.year_lbl.TabIndex = 4;
             this.year_lbl.Text = "Price Of Year";
             // 
             // six_month_lbl
             // 
             this.six_month_lbl.AutoSize = true;
-            this.six_month_lbl.Location = new System.Drawing.Point(264, 86);
+            this.six_month_lbl.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.six_month_lbl.ForeColor = System.Drawing.Color.Gold;
+            this.six_month_lbl.Location = new System.Drawing.Point(207, 106);
             this.six_month_lbl.Name = "six_month_lbl";
-            this.six_month_lbl.Size = new System.Drawing.Size(92, 13);
+            this.six_month_lbl.Size = new System.Drawing.Size(152, 19);
             this.six_month_lbl.TabIndex = 5;
             this.six_month_lbl.Text = "Price Of 6 Months";
             // 
             // three_month_lbl
             // 
             this.three_month_lbl.AutoSize = true;
-            this.three_month_lbl.Location = new System.Drawing.Point(439, 86);
+            this.three_month_lbl.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.three_month_lbl.ForeColor = System.Drawing.Color.Gold;
+            this.three_month_lbl.Location = new System.Drawing.Point(423, 106);
             this.three_month_lbl.Name = "three_month_lbl";
-            this.three_month_lbl.Size = new System.Drawing.Size(92, 13);
+            this.three_month_lbl.Size = new System.Drawing.Size(152, 19);
             this.three_month_lbl.TabIndex = 6;
             this.three_month_lbl.Text = "Price Of 3 Months";
             // 
             // one_month_lbl
             // 
             this.one_month_lbl.AutoSize = true;
-            this.one_month_lbl.Location = new System.Drawing.Point(609, 86);
+            this.one_month_lbl.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.one_month_lbl.ForeColor = System.Drawing.Color.Gold;
+            this.one_month_lbl.Location = new System.Drawing.Point(613, 106);
             this.one_month_lbl.Name = "one_month_lbl";
-            this.one_month_lbl.Size = new System.Drawing.Size(87, 13);
+            this.one_month_lbl.Size = new System.Drawing.Size(144, 19);
             this.one_month_lbl.TabIndex = 7;
             this.one_month_lbl.Text = "Price Of 1 Month";
             // 
             // Save_btn
             // 
-            this.Save_btn.Location = new System.Drawing.Point(346, 190);
+            this.Save_btn.BackColor = System.Drawing.Color.Gold;
+            this.Save_btn.Font = new System.Drawing.Font("Tahoma", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Save_btn.ForeColor = System.Drawing.Color.Cornsilk;
+            this.Save_btn.Location = new System.Drawing.Point(326, 208);
             this.Save_btn.Name = "Save_btn";
             this.Save_btn.Size = new System.Drawing.Size(148, 45);
             this.Save_btn.TabIndex = 8;
             this.Save_btn.Text = "Save";
-            this.Save_btn.UseVisualStyleBackColor = true;
+            this.Save_btn.UseVisualStyleBackColor = false;
             this.Save_btn.Click += new System.EventHandler(this.Save_btn_Click);
             // 
             // Admin_Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.Save_btn);
             this.Controls.Add(this.one_month_lbl);
             this.Controls.Add(this.three_month_lbl);
@@ -127,7 +144,8 @@
             this.Controls.Add(this.Six_M_txt);
             this.Controls.Add(this.Year_txt);
             this.Name = "Admin_Settings";
-            this.Size = new System.Drawing.Size(811, 400);
+            this.Size = new System.Drawing.Size(811, 442);
+            this.Load += new System.EventHandler(this.Admin_Settings_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
