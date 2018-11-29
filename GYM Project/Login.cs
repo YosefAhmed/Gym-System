@@ -141,6 +141,13 @@ namespace GYM_Project
         {
 
         }
-        
+
+        private void ID_txt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+               Login_btn_Click(sender, e);
+            }
+        }
     }
 }

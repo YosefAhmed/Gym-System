@@ -34,6 +34,28 @@ namespace GYM_Project
         private void Admin_Login_Load(object sender, EventArgs e)
         {
             MessageBox.Show("Please Be Sure To Set The Time In Your Computer To Avoid Data Recording Errors !!\n \nمن فضلك تأكد من ضبط الوقت والتاريخ  في جهازك تجنباً لأخطاء حفظ البيانات !! ","Attention !!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+          
+        }
+
+        private void Password_txt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Admin_Login_btn_Click(sender, e);
+            }
+        }
+
+        private void username_txt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Admin_Login_btn_Click(sender, e);
+            }
+        }
+
+        private void Password_txt_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

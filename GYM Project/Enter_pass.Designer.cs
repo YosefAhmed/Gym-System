@@ -39,6 +39,7 @@
             // 
             // Enter_pass_lbl
             // 
+            this.Enter_pass_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Enter_pass_lbl.AutoSize = true;
             this.Enter_pass_lbl.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Enter_pass_lbl.ForeColor = System.Drawing.Color.Gold;
@@ -50,15 +51,18 @@
             // 
             // pass_txt
             // 
+            this.pass_txt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pass_txt.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pass_txt.Location = new System.Drawing.Point(327, 162);
             this.pass_txt.Name = "pass_txt";
             this.pass_txt.PasswordChar = '*';
             this.pass_txt.Size = new System.Drawing.Size(235, 27);
             this.pass_txt.TabIndex = 1;
+            this.pass_txt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.pass_txt_KeyDown);
             // 
             // OK_btn
             // 
+            this.OK_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.OK_btn.BackColor = System.Drawing.Color.Yellow;
             this.OK_btn.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.OK_btn.FlatAppearance.BorderSize = 3;
@@ -75,43 +79,47 @@
             // 
             // username_txt
             // 
+            this.username_txt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.username_txt.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.username_txt.Location = new System.Drawing.Point(327, 116);
             this.username_txt.Name = "username_txt";
             this.username_txt.Size = new System.Drawing.Size(235, 27);
             this.username_txt.TabIndex = 1;
+            this.username_txt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.username_txt_KeyDown);
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(164, 162);
+            this.label1.Location = new System.Drawing.Point(97, 162);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 27);
+            this.label1.Size = new System.Drawing.Size(222, 27);
             this.label1.TabIndex = 0;
-            this.label1.Text = "password";
+            this.label1.Text = "Manager password";
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Yellow;
-            this.label2.Location = new System.Drawing.Point(164, 116);
+            this.label2.Location = new System.Drawing.Point(98, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 27);
+            this.label2.Size = new System.Drawing.Size(224, 27);
             this.label2.TabIndex = 0;
-            this.label2.Text = "username";
+            this.label2.Text = "Manager username";
             // 
             // Error_msg_lbl
             // 
+            this.Error_msg_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.Error_msg_lbl.AutoSize = true;
             this.Error_msg_lbl.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Error_msg_lbl.Location = new System.Drawing.Point(174, 288);
             this.Error_msg_lbl.Name = "Error_msg_lbl";
-            this.Error_msg_lbl.Size = new System.Drawing.Size(14, 19);
+            this.Error_msg_lbl.Size = new System.Drawing.Size(0, 19);
             this.Error_msg_lbl.TabIndex = 3;
-            this.Error_msg_lbl.Text = ".";
             // 
             // Enter_pass
             // 

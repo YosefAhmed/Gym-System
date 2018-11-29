@@ -36,6 +36,7 @@
             // 
             // Search_btn
             // 
+            this.Search_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Search_btn.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Search_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Search_btn.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
@@ -52,6 +53,7 @@
             // 
             // member_btn
             // 
+            this.member_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.member_btn.BackColor = System.Drawing.Color.WhiteSmoke;
             this.member_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.member_btn.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
@@ -68,6 +70,7 @@
             // 
             // new_btn
             // 
+            this.new_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.new_btn.BackColor = System.Drawing.Color.WhiteSmoke;
             this.new_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.new_btn.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
@@ -102,8 +105,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Search_btn;
-        private System.Windows.Forms.Button member_btn;
-        private System.Windows.Forms.Button new_btn;
+        public System.Windows.Forms.Button new_btn;
+        public System.Windows.Forms.Button Search_btn;
+        public System.Windows.Forms.Button member_btn;
     }
 }

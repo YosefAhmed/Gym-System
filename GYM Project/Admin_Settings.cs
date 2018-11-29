@@ -13,7 +13,7 @@ namespace GYM_Project
 {
     public partial class Admin_Settings : UserControl
     {
-        SqlConnection con = new SqlConnection(@"Data Source=MOSTAFA\SQLEXPRESS;Initial Catalog=Gym_mostafa;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-IAQJRV6\SQLEXPRESS;Initial Catalog=Gym_;Integrated Security=True");
         SqlCommand cmd;
         public Admin_Settings()
         {
@@ -24,13 +24,14 @@ namespace GYM_Project
         {
             if (Year_txt.Text == "" || Six_M_txt.Text == "" || three_M_txt.Text == "" || one_M_txt.Text == "")
             {
-                MessageBox.Show("Please enter all data !! ");
+                MessageBox.Show("Please enter all data !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-            cmd = new SqlCommand("insert into Price (Price_1Y, Price_6M, Price_3M, Price_1M)values('" + Year_txt.Text + "','" + Six_M_txt.Text + "','" + three_M_txt.Text + "','" + one_M_txt.Text + "')", con);
+            cmd = new SqlCommand("Update Price set Price_1Y='"+Year_txt.Text+"', Price_6M='"+Six_M_txt.Text+"', Price_3M='"+three_M_txt.Text+"', Price_1M='"+one_M_txt.Text+"'where ID='"+1+"'", con);
             con.Open();
             cmd.ExecuteNonQuery();
+                MessageBox.Show("All prices are updated :)");
             con.Close();
             Main F = new Main();
             F.Show();

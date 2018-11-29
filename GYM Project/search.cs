@@ -50,7 +50,6 @@ namespace GYM_Project
 
         private void search_Load(object sender, EventArgs e)
         {
-            
             //MessageBox.Show(Member.t2);
             Member m = new Member();
             //textBox1.Text = Member.t1;

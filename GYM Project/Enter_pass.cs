@@ -21,7 +21,7 @@ namespace GYM_Project
         {
 
             Member M = new Member();
-            if (M.check_admin(username_txt.Text, pass_txt.Text))
+            if (M.check_manager(username_txt.Text, pass_txt.Text))
             {
                 flag = true;
                 pass_txt.Text = null;
@@ -34,6 +34,22 @@ namespace GYM_Project
         private void Enter_pass_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pass_txt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                OK_btn_Click(sender, e);
+            }
+        }
+
+        private void username_txt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                OK_btn_Click(sender, e);
+            }
         }
     }
 }

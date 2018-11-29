@@ -50,6 +50,7 @@
             this.ID_txt.Size = new System.Drawing.Size(197, 27);
             this.ID_txt.TabIndex = 0;
             this.ID_txt.TextChanged += new System.EventHandler(this.ID_txt_TextChanged);
+            this.ID_txt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ID_txt_KeyDown);
             // 
             // ID_lbl
             // 
@@ -208,8 +209,10 @@
             this.Controls.Add(this.Login_btn);
             this.Controls.Add(this.ID_lbl);
             this.Controls.Add(this.ID_txt);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

@@ -30,9 +30,9 @@ namespace GYM_Project
         public string end_date { get; set; }
         public string end_date_outfreeze { get; set; }
 
-        SqlConnection con = new SqlConnection(@"Data Source=yousef;Initial Catalog=Gym_;Integrated Security=True");
+        public SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-IAQJRV6\SQLEXPRESS;Initial Catalog=Gym_;Integrated Security=True");
         SqlCommand cmd;
-        public void Insert_new(string insert_name, string Term, int Start_day, int Start_mon, int Start_year, String phone,string ed)//Collectes & Inserts Data Into DB
+        public void Insert_new(string insert_name, string Term, int Start_day, int Start_mon, int Start_year, String phone, string ed)//Collectes & Inserts Data Into DB
         {
             Add_member add = new Add_member();
             Freeze = Add_member.f;
@@ -40,7 +40,7 @@ namespace GYM_Project
             DialogResult result = MessageBox.Show("Do you want to confirm your subscription for Mr:" + insert_name + " ??", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                cmd = new SqlCommand("insert into member(Name,Term,Phone,Start_day,Start_month,Start_year,end_date_outfreeze,Freeze,invite,count)values (N'" + insert_name + "',N'" + Term + "',N'" + phone + "','" + Start_day + "','" + Start_mon + "','" + Start_year + "','" + ed+ "','" + Freeze + "','" + Invitation + "','" + Add_member.count + "')", con);
+                cmd = new SqlCommand("DECLARE @maxVal INT SELECT @maxVal = ISNULL(max(ID),999) from member  DBCC CHECKIDENT('member', RESEED, @maxVal)    insert into member(Name,Term,Phone,Start_day,Start_month,Start_year,end_date_outfreeze,Freeze,invite,count)values (N'" + insert_name + "',N'" + Term + "',N'" + phone + "','" + Start_day + "','" + Start_mon + "','" + Start_year + "','" + ed + "','" + Freeze + "','" + Invitation + "','" + Add_member.count + "')", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
@@ -65,7 +65,7 @@ namespace GYM_Project
                 con.Close();
                 return true;
             }
-          
+
         }
         public bool Check_exist_name(string name)
         {
@@ -85,7 +85,7 @@ namespace GYM_Project
                 con.Close();
                 return true;
             }
-         
+
         }
         public static int re_id;
         public void Check(int Id)//checkes if ID is existed & if membership is available
@@ -101,18 +101,18 @@ namespace GYM_Project
                 string End = RD["end_date_outfreeze"].ToString();
                 int c = Convert.ToInt32(RD["count"]);
                 string name = RD["Name"].ToString();
-               // string endd = RD["end_date_outfreeze"].ToString();
+                // string endd = RD["end_date_outfreeze"].ToString();
                 DialogResult resu = MessageBox.Show("Name : " + name + '\n' + "you still have " + RD["Freeze"] + " freeze days and " + RD["invite"] + " invitations " + '\n' + "till : " + End, "Do you want to login with this details ?", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                 RD.Close();
                 if (resu == DialogResult.Yes)
                 {
-                   // DateTime En = new DateTime(year, month, day);
+                    // DateTime En = new DateTime(year, month, day);
                     string[] format = { "yyyy-MM-dd" };
                     DateTime Sdate;
                     DateTime.TryParseExact(End.ToString(), format, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out Sdate);
- 
-                     if(DateTime.Today> Sdate||c<=0)
-                     {
+
+                    if (DateTime.Today > Sdate || c <= 0)
+                    {
                         MessageBox.Show("Membership Ended for Mr : " + name + " :( ", "We are sorry for this :(", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         DialogResult res = MessageBox.Show("Do You Wont To Renew The Membership ?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         re_id = Id;
@@ -123,15 +123,15 @@ namespace GYM_Project
                             l.Hide();
                             r.Show();
                         }
-                     }
-                     else if (DateTime.Today <= Convert.ToDateTime(End) && c > 0)
-                     {
+                    }
+                    else if (DateTime.Today <= Convert.ToDateTime(End) && c > 0)
+                    {
                         MessageBox.Show("Loged In Successfully !", "Succeeded !", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         c--;
                         cmd = new SqlCommand("Update member set count='" + c + "'where ID='" + Id + "'", con);
                         cmd.ExecuteNonQuery();
                         con.Close();
-                     }
+                    }
                 }
 
             }
@@ -150,7 +150,7 @@ namespace GYM_Project
         {
             SqlCommand cmd;
             SqlDataReader dr;
-            cmd = new SqlCommand("select * from member where ID='" + Id + "'or Name='"+Id+"'", con);
+            cmd = new SqlCommand("select * from member where ID='" + Id + "'or Name='" + Id + "'", con);
             con.Close();
             con.Open();
             dr = cmd.ExecuteReader();
@@ -215,7 +215,7 @@ namespace GYM_Project
             dr.Close();
             con.Close();
         }
-        public void renew(int Id, String Term,  String end_d, int freeze, int invite, int count)//updates the start date & the term
+        public void renew(int Id, String Term, String end_d, int freeze, int invite, int count)//updates the start date & the term
         {
             cmd = new SqlCommand("Update member set Start_day='" + DateTime.Today.Day + "',Start_month='" + DateTime.Today.Month + "',Start_year='" + DateTime.Today.Year + "',Term='" + Term + "',end_date_outfreeze='" + end_d + "',Freeze='" + freeze + "',invite='" + invite + "',count='" + count + "'where ID='" + Id + "'", con);
             con.Open();
@@ -234,13 +234,13 @@ namespace GYM_Project
             if (RD.Read())
             {
                 string name = RD["Name"].ToString();
-                int freez = Convert.ToInt32(RD["Freeze"].ToString());
-                if (freez > 0)
+                int freez = Convert.ToInt32(RD["Freeze"].ToString()) - legnth;
+                if (freez >= 0)
                 {
                     DialogResult resu = MessageBox.Show("Do you want to freeze days to Mr  '" + name + "'  ?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                     if (resu == DialogResult.Yes)
                     {
-                        freez-=legnth;
+                        //freez -= legnth;
                         //int year, month, day = Convert.ToInt32(RD["End_day"].ToString());
                         //month = Convert.ToInt32(RD["End_month"].ToString());
                         //year = Convert.ToInt32(RD["End_year"].ToString());
@@ -251,35 +251,50 @@ namespace GYM_Project
                         TimeSpan Sp = TimeSpan.FromDays(legnth);
                         DateTime Edate = Sdate.Add(Sp);
                         string freez_date = Edate.ToShortDateString();
-                        cmd = new SqlCommand("Update member set end_date_outfreeze='" + freez_date + "',Freeze='"+freez+"', Freezed='" + legnth + "' WHERE ID='" + Id + "'", con);
+                        if (freez < 0) freez = 0;
+                        cmd = new SqlCommand("Update member set end_date_outfreeze='" + freez_date + "',Freeze='" + freez + "', Freezed='" + legnth + "' WHERE ID='" + Id + "'", con);
                         RD.Close();
                         cmd.ExecuteNonQuery();
                     }
                     con.Close();
                 }
                 else
-                    MessageBox.Show("There isn't any freeze days for Mr : " + name, "Sorry :(", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Mr '" + name + "' hasn't enough freeze days", "Sorry :(", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
-        public void Cancel_freeze(int Freezed, int Id)//updates the expir date  
+        public void Cancel_freeze(int Frezd, int Id)//updates the expir date  
         {
             con.Open();
-            cmd = new SqlCommand("select Freezed,Freeze from member  where ID='" + Id + "'", con);
+            cmd = new SqlCommand("select end_date_outfreeze,Freezed,Freeze from member  where ID='" + Id + "'", con);
             SqlDataReader RD = cmd.ExecuteReader();
             if (RD.Read())
             {
+
                 int freez, legnth = Convert.ToInt32(RD["Freezed"].ToString());
-                freez=Convert.ToInt32(RD["Freeze"].ToString());
-                freez += legnth - Freezed;
-                TimeSpan final_span = TimeSpan.FromDays(legnth) - TimeSpan.FromDays(Freezed);
-                DateTime Edate = DateTime.Today.Add(final_span);
-                string freez_date = Edate.ToShortDateString();
-                cmd = new SqlCommand("Update member set end_date_outfreeze='" + freez_date + "',Freeze='"+freez+"', Freezed='" + legnth + "' WHERE ID='" + Id + "'", con);
+                if (legnth == 0) MessageBox.Show("This member didn't make freeze to cancel", "Sorry :(", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (legnth == Frezd) MessageBox.Show("your freeze has been ended", "Sorry :(", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    string[] format = { "yyyy-MM-dd" };
+                    DateTime Sdate;
+                    DateTime.TryParseExact(RD["end_date_outfreeze"].ToString(), format, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out Sdate);
+                    // DateTime Sdate =D;
+                    TimeSpan Sp = TimeSpan.FromDays(Frezd);
 
-                RD.Close();
-                cmd.ExecuteNonQuery();
-                con.Close();
+                    freez = Convert.ToInt32(RD["Freeze"].ToString());
+                    freez += legnth - Frezd;
 
+                    TimeSpan final_span = TimeSpan.FromDays(legnth) - TimeSpan.FromDays(Frezd);
+                    DateTime Edate = Sdate.Subtract(final_span);
+                    string freez_date = Edate.ToShortDateString();
+                    cmd = new SqlCommand("Update member set end_date_outfreeze='" + freez_date + "',Freeze='" + freez + "', Freezed='" + 0 + "' WHERE ID='" + Id + "'", con);
+
+                    RD.Close();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
+                }
             }
         }
         public void invite(int idd)//updates the number of invitations  **(this function may be removed)**
@@ -379,10 +394,40 @@ namespace GYM_Project
                 con.Close();
                 return false;
             }
-            
-          
-        
+
+
+
         }
-     
+
+        public bool check_manager(string name, string pass)
+        {
+            con.Open();
+            cmd = new SqlCommand("select * from Manager where id='"+name+"'", con);
+            SqlDataReader RD = cmd.ExecuteReader();
+
+
+            if (RD.Read())
+            {
+                string pas = RD["Pass"].ToString();
+                if (pass == pas)
+                {
+                    RD.Close();
+                    con.Close();
+                    return true;
+                }
+                else
+                {
+                    RD.Close();
+                    con.Close();
+                    return false;
+                }
+             }
+            else
+            {
+                RD.Close();
+                con.Close();
+                return false;
+            }
+        }
     }
 }

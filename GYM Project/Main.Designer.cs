@@ -55,6 +55,7 @@
             // 
             // Back_btn
             // 
+            this.Back_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Back_btn.BackColor = System.Drawing.Color.Yellow;
             this.Back_btn.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.Back_btn.FlatAppearance.BorderSize = 3;
@@ -80,7 +81,6 @@
             this.main_Form1.Name = "main_Form1";
             this.main_Form1.Size = new System.Drawing.Size(814, 369);
             this.main_Form1.TabIndex = 4;
-            this.main_Form1.Load += new System.EventHandler(this.main_Form1_Load);
             // 
             // enter_pass1
             // 
@@ -103,7 +103,6 @@
             this.admin_Settings1.Name = "admin_Settings1";
             this.admin_Settings1.Size = new System.Drawing.Size(814, 355);
             this.admin_Settings1.TabIndex = 3;
-            this.admin_Settings1.Load += new System.EventHandler(this.admin_Settings1_Load);
             // 
             // Main
             // 
@@ -122,8 +121,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+            this.Resize += new System.EventHandler(this.Main_Resize);
             this.ResumeLayout(false);
 
         }

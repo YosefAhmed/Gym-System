@@ -55,6 +55,7 @@
             // 
             // in_name
             // 
+            this.in_name.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.in_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.in_name.Location = new System.Drawing.Point(146, 33);
             this.in_name.Name = "in_name";
@@ -63,6 +64,7 @@
             // 
             // namelbl
             // 
+            this.namelbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.namelbl.BackColor = System.Drawing.Color.Transparent;
             this.namelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.namelbl.ForeColor = System.Drawing.Color.OldLace;
@@ -74,6 +76,7 @@
             // 
             // idlbl
             // 
+            this.idlbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.idlbl.BackColor = System.Drawing.Color.Transparent;
             this.idlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idlbl.ForeColor = System.Drawing.Color.OldLace;
@@ -85,6 +88,7 @@
             // 
             // in_id
             // 
+            this.in_id.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.in_id.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.in_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.in_id.Location = new System.Drawing.Point(147, 91);
@@ -95,9 +99,11 @@
             this.in_id.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.in_id.Click += new System.EventHandler(this.in_id_Click);
             this.in_id.TextChanged += new System.EventHandler(this.in_id_TextChanged);
+            this.in_id.Enter += new System.EventHandler(this.in_id_Enter);
             // 
             // phlbl
             // 
+            this.phlbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.phlbl.BackColor = System.Drawing.Color.Transparent;
             this.phlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phlbl.ForeColor = System.Drawing.Color.OldLace;
@@ -109,6 +115,7 @@
             // 
             // in_pho
             // 
+            this.in_pho.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.in_pho.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.in_pho.Location = new System.Drawing.Point(145, 145);
             this.in_pho.Name = "in_pho";
@@ -117,6 +124,7 @@
             // 
             // imonth
             // 
+            this.imonth.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.imonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.imonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.imonth.ForeColor = System.Drawing.Color.Black;
@@ -142,6 +150,7 @@
             // 
             // iyear
             // 
+            this.iyear.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.iyear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.iyear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iyear.ForeColor = System.Drawing.Color.Black;
@@ -169,12 +178,12 @@
             // 
             // iday
             // 
+            this.iday.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.iday.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.iday.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iday.ForeColor = System.Drawing.Color.Black;
             this.iday.FormattingEnabled = true;
             this.iday.Items.AddRange(new object[] {
-            "Day",
             "1",
             "2",
             "3",
@@ -214,6 +223,7 @@
             // 
             // sdatelbl
             // 
+            this.sdatelbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.sdatelbl.BackColor = System.Drawing.Color.Transparent;
             this.sdatelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sdatelbl.ForeColor = System.Drawing.Color.OldLace;
@@ -225,6 +235,7 @@
             // 
             // pricetxt
             // 
+            this.pricetxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pricetxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pricetxt.Location = new System.Drawing.Point(640, 12);
             this.pricetxt.Name = "pricetxt";
@@ -234,12 +245,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.isna);
             this.groupBox1.Controls.Add(this.i6shr);
             this.groupBox1.Controls.Add(this.i3shr);
             this.groupBox1.Controls.Add(this.ishr);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Location = new System.Drawing.Point(30, 255);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(138, 164);
@@ -299,6 +312,7 @@
             // 
             // calcbtn
             // 
+            this.calcbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.calcbtn.BackColor = System.Drawing.Color.Yellow;
             this.calcbtn.FlatAppearance.BorderColor = System.Drawing.Color.OldLace;
             this.calcbtn.FlatAppearance.BorderSize = 3;
@@ -315,6 +329,7 @@
             // 
             // confirmbtn
             // 
+            this.confirmbtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.confirmbtn.BackColor = System.Drawing.Color.Yellow;
             this.confirmbtn.FlatAppearance.BorderColor = System.Drawing.Color.OldLace;
             this.confirmbtn.FlatAppearance.BorderSize = 3;
@@ -332,6 +347,7 @@
             // 
             // label18
             // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.OldLace;
@@ -344,6 +360,7 @@
             // 
             // label19
             // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.OldLace;
@@ -356,6 +373,7 @@
             // 
             // label20
             // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.OldLace;
@@ -392,6 +410,7 @@
             this.Controls.Add(this.iday);
             this.DoubleBuffered = true;
             this.Name = "Add_member";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_member";
             this.Load += new System.EventHandler(this.Add_member_Load);
             this.groupBox1.ResumeLayout(false);

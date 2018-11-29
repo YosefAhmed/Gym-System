@@ -26,26 +26,52 @@ namespace GYM_Project
         public static int id;
         public static string phone;
 
-        SqlConnection con = new SqlConnection(@"Data Source=yousef;Initial Catalog=Gym_;Integrated Security=True");
+        public SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-IAQJRV6\SQLEXPRESS;Initial Catalog=Gym_;Integrated Security=True");
 
         private void Add_member_Load(object sender, EventArgs e)
         {
-            iday.Text = "Day";
-            imonth.Text= "Mon";
-            iyear.Text = "Year";
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-
         }
         private void calcbtn_Click(object sender, EventArgs e)
         {
-            if(ishr.Checked)
-            {
+            
                 con.Open();
-                
+                SqlCommand cmd = new SqlCommand("Select * from Price where ID ='"+1+"'", con);
+                SqlDataReader RD = cmd.ExecuteReader();
+            if (ishr.Checked)
+            {
+                if (RD.Read())
+                {
+                    pricetxt.Text = RD["Price_1M"].ToString();
+                }
             }
+           else if (i3shr.Checked)
+            {
+                if (RD.Read())
+                {
+                    pricetxt.Text = RD["Price_3M"].ToString();
+                }
+            }
+            else if (i6shr.Checked)
+            {
+                if (RD.Read())
+                {
+                    pricetxt.Text = RD["Price_6M"].ToString();
+                }
+            }
+            else if (isna.Checked)
+            {
+                if (RD.Read())
+                {
+                    pricetxt.Text = RD["Price_1Y"].ToString();
+                }
+            }
+            con.Close();
+                RD.Close();
+            
 
         }
         public static string edate;
@@ -93,9 +119,14 @@ namespace GYM_Project
         public static int count;
         private void button1_Click(object sender, EventArgs e)
         {
+            string s = in_pho.Text;
+            bool x = in_pho.Text.All(char.IsDigit);
             if (in_name.Text == "" || in_pho.Text == "" || in_id.Text == "" || iday.Text == "Day" || imonth.Text == "Mon" || iyear.Text == "Year" || ((ishr.Checked == false && i3shr.Checked == false && i6shr.Checked == false && isna.Checked == false)))
             {
-                MessageBox.Show("Please enter all data !! ");
+                MessageBox.Show("Please enter all data !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }        
+            else if(in_pho.Text.Length!=11 || !x || s[0]!='0' || s[1]!='1'  ){
+                  MessageBox.Show("Phone number is not correct !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -188,6 +219,30 @@ namespace GYM_Project
         private void in_id_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void in_id_Enter(object sender, EventArgs e)
+        {
+            MAX = 0;
+            int g;
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Select ID from member", con);
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                g = Convert.ToInt32((dr["ID"].ToString()));
+                if (g >= MAX)
+                { MAX = g; }
+            }
+
+
+            dr.Close();
+            con.Close();
+            if (MAX == 0)
+            { in_id.Text = "1000"; }
+            else
+                in_id.Text = (MAX + 1).ToString();
         }
     }
     }

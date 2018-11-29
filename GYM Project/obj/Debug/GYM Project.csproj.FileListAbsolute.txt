@@ -32,24 +32,6 @@ D:\projects\Limitless Fitness Gym\Gym-System-master\GYM Project\obj\Debug\GYM_Pr
 D:\projects\Limitless Fitness Gym\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Properties.Resources.resources
 D:\projects\Limitless Fitness Gym\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Renewform.resources
 D:\projects\Limitless Fitness Gym\Gym-System-master\GYM Project\obj\Debug\GYM Project.csproj.GenerateResource.Cache
-D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\bin\Debug\GYM Project.exe.config
-D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM Project.exe
-D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM Project.pdb
-D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\bin\Debug\GYM Project.exe
-D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\bin\Debug\GYM Project.pdb
-D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM Project.csprojResolveAssemblyReference.cache
-D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Add_member.resources
-D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Admin_Login.resources
-D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Admin_Settings.resources
-D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Enter_pass.resources
-D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Login.resources
-D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Main_Form.resources
-D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Properties.Resources.resources
-D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Renewform.resources
-D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM Project.csproj.GenerateResource.Cache
-D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Main.resources
-D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.search.resources
-D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Search_Form.resources
 C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\bin\Debug\GYM Project.exe.config
 C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\bin\Debug\GYM Project.exe
 C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\bin\Debug\GYM Project.pdb
@@ -88,7 +70,6 @@ D:\projects\Limitless Fitness Gym\GYM (medo)\Gym-System-master\GYM Project\obj\D
 D:\projects\Limitless Fitness Gym\GYM (medo)\Gym-System-master\GYM Project\obj\Debug\GYM_Project.search.resources
 D:\projects\Limitless Fitness Gym\GYM (medo)\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Search_Form.resources
 D:\projects\Limitless Fitness Gym\GYM (medo)\Gym-System-master\GYM Project\obj\Debug\GYM Project.csproj.GenerateResource.Cache
-D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Admin_accounts.resources
 F:\system of adabtion\photos\Gym-System-master\GYM Project\bin\Debug\GYM Project.exe.config
 F:\system of adabtion\photos\Gym-System-master\GYM Project\bin\Debug\GYM Project.exe
 F:\system of adabtion\photos\Gym-System-master\GYM Project\bin\Debug\GYM Project.pdb
@@ -130,4 +111,26 @@ D:\projects\Limitless Fitness Gym\GYM\GYM Project\obj\Debug\GYM_Project.Renewfor
 D:\projects\Limitless Fitness Gym\GYM\GYM Project\obj\Debug\GYM_Project.search.resources
 D:\projects\Limitless Fitness Gym\GYM\GYM Project\obj\Debug\GYM_Project.Search_Form.resources
 D:\projects\Limitless Fitness Gym\GYM\GYM Project\obj\Debug\GYM Project.csproj.GenerateResource.Cache
-D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\bin\Debug\Bunifu.Core.dll
+C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\bin\Debug\Bunifu.Core.dll
+C:\Users\medog\OneDrive\Desktop\Gym-System-master\Gym-System-master\GYM Project\obj\Debug\GYM_Project.Record.resources
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\bin\Debug\GYM Project.exe.config
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\bin\Debug\GYM Project.exe
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\bin\Debug\GYM Project.pdb
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Add_member.resources
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Admin_accounts.resources
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Admin_Login.resources
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Admin_Settings.resources
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Enter_pass.resources
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Main.resources
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Login.resources
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Main_Form.resources
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Properties.Resources.resources
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Record.resources
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Renewform.resources
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.search.resources
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM_Project.Search_Form.resources
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM Project.csproj.GenerateResource.Cache
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM Project.exe
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM Project.pdb
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\obj\Debug\GYM Project.csprojResolveAssemblyReference.cache
+D:\projects\Limitless Fitness Gym\GYM Project\GYM Project\bin\Debug\Bunifu_UI_v1.52.dll

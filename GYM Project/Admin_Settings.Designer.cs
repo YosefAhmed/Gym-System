@@ -41,6 +41,7 @@
             // 
             // Year_txt
             // 
+            this.Year_txt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.Year_txt.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Year_txt.Location = new System.Drawing.Point(21, 139);
             this.Year_txt.Name = "Year_txt";
@@ -49,6 +50,7 @@
             // 
             // Six_M_txt
             // 
+            this.Six_M_txt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.Six_M_txt.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Six_M_txt.Location = new System.Drawing.Point(211, 139);
             this.Six_M_txt.Name = "Six_M_txt";
@@ -57,6 +59,7 @@
             // 
             // three_M_txt
             // 
+            this.three_M_txt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.three_M_txt.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.three_M_txt.Location = new System.Drawing.Point(426, 139);
             this.three_M_txt.Name = "three_M_txt";
@@ -65,6 +68,7 @@
             // 
             // one_M_txt
             // 
+            this.one_M_txt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.one_M_txt.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.one_M_txt.Location = new System.Drawing.Point(616, 139);
             this.one_M_txt.Name = "one_M_txt";
@@ -73,6 +77,7 @@
             // 
             // year_lbl
             // 
+            this.year_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.year_lbl.AutoSize = true;
             this.year_lbl.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.year_lbl.ForeColor = System.Drawing.Color.Gold;
@@ -84,6 +89,7 @@
             // 
             // six_month_lbl
             // 
+            this.six_month_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.six_month_lbl.AutoSize = true;
             this.six_month_lbl.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.six_month_lbl.ForeColor = System.Drawing.Color.Gold;
@@ -95,6 +101,7 @@
             // 
             // three_month_lbl
             // 
+            this.three_month_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.three_month_lbl.AutoSize = true;
             this.three_month_lbl.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.three_month_lbl.ForeColor = System.Drawing.Color.Gold;
@@ -106,6 +113,7 @@
             // 
             // one_month_lbl
             // 
+            this.one_month_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.one_month_lbl.AutoSize = true;
             this.one_month_lbl.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.one_month_lbl.ForeColor = System.Drawing.Color.Gold;
@@ -117,6 +125,7 @@
             // 
             // Save_btn
             // 
+            this.Save_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Save_btn.BackColor = System.Drawing.Color.Gold;
             this.Save_btn.Font = new System.Drawing.Font("Tahoma", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Save_btn.ForeColor = System.Drawing.Color.Cornsilk;

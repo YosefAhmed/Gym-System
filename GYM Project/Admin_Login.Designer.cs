@@ -44,6 +44,7 @@
             this.username_txt.Name = "username_txt";
             this.username_txt.Size = new System.Drawing.Size(190, 24);
             this.username_txt.TabIndex = 0;
+            this.username_txt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.username_txt_KeyDown);
             // 
             // Password_txt
             // 
@@ -53,6 +54,8 @@
             this.Password_txt.PasswordChar = '*';
             this.Password_txt.Size = new System.Drawing.Size(190, 24);
             this.Password_txt.TabIndex = 1;
+            this.Password_txt.TextChanged += new System.EventHandler(this.Password_txt_TextChanged);
+            this.Password_txt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Password_txt_KeyDown);
             // 
             // username_lbl
             // 
@@ -119,7 +122,9 @@
             this.Controls.Add(this.username_lbl);
             this.Controls.Add(this.Password_txt);
             this.Controls.Add(this.username_txt);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Admin_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin_Login";
