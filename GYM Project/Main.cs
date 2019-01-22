@@ -56,6 +56,8 @@ namespace GYM_Project
         {
             this.main_Form1.Show();
             this.Settings_btn.Show();
+            enter_pass1.pass_txt.Text = null;
+            enter_pass1.username_txt.Text = null;
         }
 
 
@@ -74,5 +76,6 @@ namespace GYM_Project
             }
                
         }
+
     }
 }

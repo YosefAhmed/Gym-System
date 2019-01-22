@@ -134,8 +134,8 @@
         private Admin_Settings admin_Settings1;
         private Main_Form main_Form1;
         private System.Windows.Forms.Button Settings_btn;
-        private System.Windows.Forms.Button Back_btn;
         private Enter_pass enter_pass1;
+        public System.Windows.Forms.Button Back_btn;
     }
 }
 

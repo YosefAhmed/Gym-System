@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace GYM_Project
 {
     public partial class Renewform : Form
@@ -32,201 +32,10 @@ namespace GYM_Project
         public static int mf;
         public static int yf;
         public static string end_date_outfr;
-        //public void calc_renew(string day, int mon, string year)//calc end date with freeze
-        //{
-        //    editedmon = mon;
-        //    d = Convert.ToInt32(day);
-        //    y = Convert.ToInt32(year);
-        //    mf = editedmon;
-        //    df = d;
-        //    yf = y;
-        //    //dah l 4hr
-        //    if (ishr.Checked)
-        //    {
-        //        if (editedmon == 12)
-        //        {
-        //            editedmon = 1;
-        //            mf = 1;
-        //            yf++;
-        //            y++;
-        //        }
-        //        else
-        //        {
-        //            editedmon += 1;
-        //            mf++;
-        //        }
-        //    }
-        //    ///////////////////////////////////////////////
-        //    //dah l 3 4hor
-        //    if (i3shr.Checked)
-        //    {
-        //        if (editedmon < 9 && Convert.ToInt32(d) <= 16)
-        //        {
-        //            editedmon += 3;
-        //            mf += 3;
-        //            d += 15;
-        //            // y = Convert.ToInt32(isna.Text);
-        //        }
-        //        else if (editedmon < 9 && Convert.ToInt32(d) > 16)
-        //        {
-        //            editedmon += 4;
-        //            mf += 3;
-        //            d = d - 15;
-        //            //y = Convert.ToInt32(isna.Text);
-        //        }
-        //        else if (editedmon == 9 && Convert.ToInt32(d) <= 16)
-        //        {
-        //            editedmon += 3;
-        //            mf += 3;
-        //            d += 15;
-        //            // y = Convert.ToInt32(isna.Text);
-        //        }
-        //        else if (editedmon == 9 && Convert.ToInt32(d) > 16)
-        //        {
-        //            editedmon = 1;
-        //            mf += 3;
-        //            d = d - 15;
-        //            yf++;
-        //            y = y + 1;
-        //        }
-        //        else if (editedmon == 10 && Convert.ToInt32(d) <= 16)
-        //        {
-        //            editedmon = 1;
-        //            mf = 1;
-        //            d = d + 15;
-        //            yf++;
-        //            y = y + 1;
-        //        }
-        //        else if (editedmon == 10 && Convert.ToInt32(d) > 16)
-        //        {
-        //            editedmon = 2;
-        //            mf = 1;
-        //            d = d - 15;
-        //            yf++;
-        //            y = y + 1;
-        //        }
-        //        else if (editedmon == 11 && Convert.ToInt32(d) <= 16)
-        //        {
-        //            editedmon = 2;
-        //            mf = 2;
-        //            d = d + 15;
-        //            yf++;
-        //            y = y + 1;
-        //        }
-        //        else if (editedmon == 11 && Convert.ToInt32(d) > 16)
-        //        {
-        //            editedmon = 3;
-        //            mf = 2;
-        //            d = d - 15; 
-        //            yf++;
-        //            y = y + 1;
-        //        }
-        //        else if (editedmon == 12 && Convert.ToInt32(d) <= 16)
-        //        {
-        //            editedmon = 3;
-        //            mf = 3;
-        //            d = d + 15;
-        //            yf++;
-        //            y = y + 1;
-        //        }
-        //        else if (editedmon == 12 && Convert.ToInt32(d) > 16)
-        //        {
-        //            editedmon = 4;
-        //            mf += 3;
-        //            d = d - 15;
-        //            yf++;
-        //            y = y + 1;
-        //        }
-        //    }
-        //    //////////////////////////////////////////////////////
-        //    //dah l 6 4hor
-        //    if (i6shr.Checked)
-        //    {
-        //        if (editedmon <= 5)
-        //        {
-        //            editedmon += 7;
-        //            mf += 6;
-        //        }
-        //        else if (editedmon == 6)
-        //        {
-        //            editedmon = 1;
-        //            mf = 12;
-        //            y = y + 1;
-        //        }
-        //        else if (editedmon == 7)
-        //        {
-        //            editedmon = 2;
-        //            mf = 1;
-        //            yf++;
-        //            y = y + 1;
-        //        }
-        //        else if (editedmon == 8)
-        //        {
-        //            editedmon = 3;
-        //            mf = 2;
-        //            yf++;
-        //            y = y + 1;
-        //        }
-        //        else if (editedmon == 9)
-        //        {
-        //            editedmon = 4;
-        //            mf = 3;
-        //            yf++;
-        //            y = y + 1;
-        //        }
-        //        else if (editedmon == 10)
-        //        {
-        //            editedmon = 5;
-        //            mf = 4;
-        //            yf++;
-        //            y = y + 1;
-        //        }
-        //        else if (editedmon == 11)
-        //        {
-        //            editedmon = 6;
-        //            mf = 5;
-        //            yf++;
-        //            y = y + 1;
-        //        }
-        //        else if (editedmon == 12)
-        //        {
-        //            editedmon = 7;
-        //            mf = 6;
-        //            yf++;
-        //            y = y + 1;
-        //        }
-        //    }
-        //    //////////////////////////////////////////////////
-        //    //dah l sna
-        //    if (isna.Checked)
-        //    {
-        //        if (editedmon == 11)
-        //        {
-        //            editedmon = 1;
-        //            mf = 11;
-        //            yf++;
-        //            y = y + 2;
-        //        }
-        //        else if (editedmon == 12)
-        //        {
-        //            editedmon = 2;
-        //            yf = 12;
-        //            yf++;
-        //            y = y + 2;
-        //        }
-        //        else
-        //        {
-
-        //            editedmon += 2;
-        //            yf++;
-        //            y = y + 1;
-        //        }
-        //    }
-        //    end_d = df.ToString() + "/" + mf.ToString() + "/" + yf.ToString();
-        //    end_date_outfr = df.ToString() + "/" + mf.ToString() + "/" + yf.ToString();
-           
-        //    }
+        Member M = new Member(); 
         public static string edate;
+        SqlCommand cmd;
+        SqlDataReader rd;
         public void calc_renew(string day, int mon, string year)//calc end date with freeze
         {
 
@@ -268,40 +77,116 @@ namespace GYM_Project
         public static int f;
         public static int invite;
         public static int count;
+
         private void confirmbtn_Click(object sender, EventArgs e)
         {
-            calc_renew(DateTime.Today.Day.ToString(),DateTime.Today.Month, DateTime.Today.Year.ToString());
-            if (ishr.Checked == true)
-            {
-                term = ishr.Text;
-                f = 0;
-                invite = 0;
-                count = 30;
+            int freeze_sna = 0; int freeze_6 = 0; int freeze_3 = 0; int freeze_1 = 0;
+            if (paid_txt.Text == "")
+                MessageBox.Show("Please enter the paid amount !\n من فضلك أدخل المبلغ المدفوع!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {     
+
+                cmd = new SqlCommand("select *from Price", M.con);
+                M.con.Open();
+                rd = cmd.ExecuteReader();
+                while (rd.Read())
+                {
+                    freeze_sna = rd.GetInt32(5);
+                    freeze_6 = rd.GetInt32(6);
+                    freeze_3 = rd.GetInt32(7);
+                    freeze_1 = rd.GetInt32(8);
+                }
+                rd.Close();
+                M.con.Close();
+
+                calc_renew(DateTime.Today.Day.ToString(), DateTime.Today.Month, DateTime.Today.Year.ToString());
+                if (ishr.Checked == true)
+                {
+                    term = ishr.Text;
+                    f = freeze_1;
+                    invite = 0;
+                    count = 30;
+                }
+                else if (i3shr.Checked == true)
+                {
+                    term = i3shr.Text;
+                    f = freeze_3;
+                    invite = 6;
+                    count = 90;
+                }
+                else if (i6shr.Checked == true)
+                {
+                    term = i6shr.Text;
+                    f = freeze_6;
+                    invite = 12;
+                    count = 180;
+                }
+                else if (isna.Checked == true)
+                {
+                    term = isna.Text;
+                    f = freeze_sna;
+                    invite = 25;
+                    count = 365;
+                }
+                if (remin_txt.Text.All(char.IsDigit))
+                {
+                    Add_member.remind_tmp = remin_txt.Text;
+                    Add_member.paid_tmp = paid_txt.Text;
+                    M.renew(Convert.ToInt32(in_id.Text), term, edate, f, invite, count);
+                    this.Close();
+                }
+                else
+                    MessageBox.Show("Please press 'Calculate' button before conferm !\nمن فضلك احسب المبلغ الباقي قبل تأكيد الاشتراك !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (i3shr.Checked == true)
+        }
+
+        private void calcbtn_Click(object sender, EventArgs e)
+        {
+            bool flag = paid_txt.Text.All(char.IsDigit);
+
+            if (ishr.Checked || i3shr.Checked || i6shr.Checked || isna.Checked)
             {
-                term = i3shr.Text;
-                f = 15;
-                invite = 6;
-                count = 90;
+                if (paid_txt.Text == "")
+                    MessageBox.Show("Please enter the paid amount !\n من فضلك أدخل المبلغ المدفوع!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (!flag || Convert.ToInt16(paid_txt.Text) > Convert.ToInt16(pricetxt.Text))
+                    MessageBox.Show("Please make sure of the amount paid!\n  من فضلك تأكد من المبلغ المدفوع!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    int R = Convert.ToInt16(pricetxt.Text) - Convert.ToInt16(paid_txt.Text);
+                    remin_txt.Text = R.ToString();
+                }
             }
-            else if (i6shr.Checked == true)
-            {
-                term = i6shr.Text;
-                f = 30;
-                invite = 12;
-                count = 180;
-            }
-            else if (isna.Checked == true)
-            {
-                term = isna.Text;
-                f = 60;
-                invite = 25;
-                count = 365;
-            }
-            Member me = new Member();
-            me.renew(Convert.ToInt32(in_id.Text), term, edate, f, invite, count);
-            this.Close();
+            else
+                MessageBox.Show("Please check a membership term !\nمن فضلك اختر فترة اشتراك! ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+        Add_member A = new Add_member();
+        private void ishr_CheckedChanged(object sender, EventArgs e)
+        {
+            pricetxt.Text =A.return_price(ishr.Name);
+            if (paid_txt.Text != "")
+                calcbtn_Click(sender, e);
+        }
+
+        private void i3shr_CheckedChanged(object sender, EventArgs e)
+        {
+            pricetxt.Text = A.return_price(i3shr.Name);
+            if (paid_txt.Text != "")
+                calcbtn_Click(sender, e);
+        }
+
+        private void i6shr_CheckedChanged(object sender, EventArgs e)
+        {
+            pricetxt.Text = A.return_price(i6shr.Name);
+            if (paid_txt.Text != "")
+                calcbtn_Click(sender, e);
+        }
+
+        private void isna_CheckedChanged(object sender, EventArgs e)
+        {
+            pricetxt.Text = A.return_price(isna.Name);
+            if (paid_txt.Text != "")
+                calcbtn_Click(sender, e);
         }
     }
 }

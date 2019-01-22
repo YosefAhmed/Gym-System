@@ -25,16 +25,14 @@ namespace GYM_Project
             {
                 flag = true;
                 pass_txt.Text = null;
+                username_txt.Text = null;
                 this.Hide();
             }
             else
                 Error_msg_lbl.Text = "* Wrong Username Or Password, Please Try Again !! *";
         }
 
-        private void Enter_pass_Load(object sender, EventArgs e)
-        {
 
-        }
 
         private void pass_txt_KeyDown(object sender, KeyEventArgs e)
         {
@@ -51,5 +49,11 @@ namespace GYM_Project
                 OK_btn_Click(sender, e);
             }
         }
+
+        private void Enter_pass_Load(object sender, EventArgs e)
+        {
+            username_txt.Focus();
+        }
+
     }
 }

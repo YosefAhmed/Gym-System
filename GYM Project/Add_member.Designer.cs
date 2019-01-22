@@ -39,7 +39,6 @@
             this.iyear = new System.Windows.Forms.ComboBox();
             this.iday = new System.Windows.Forms.ComboBox();
             this.sdatelbl = new System.Windows.Forms.Label();
-            this.pricetxt = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.isna = new System.Windows.Forms.RadioButton();
             this.i6shr = new System.Windows.Forms.RadioButton();
@@ -50,16 +49,23 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.paid_txt = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pricetxt = new System.Windows.Forms.Label();
+            this.remin_txt = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // in_name
             // 
             this.in_name.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.in_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.in_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.in_name.Location = new System.Drawing.Point(146, 33);
+            this.in_name.Location = new System.Drawing.Point(146, 40);
             this.in_name.Name = "in_name";
-            this.in_name.Size = new System.Drawing.Size(258, 31);
+            this.in_name.Size = new System.Drawing.Size(258, 24);
             this.in_name.TabIndex = 0;
             // 
             // namelbl
@@ -90,15 +96,15 @@
             // 
             this.in_id.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.in_id.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.in_id.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.in_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.in_id.Location = new System.Drawing.Point(147, 91);
+            this.in_id.Location = new System.Drawing.Point(147, 98);
             this.in_id.Name = "in_id";
             this.in_id.ReadOnly = true;
-            this.in_id.Size = new System.Drawing.Size(257, 31);
+            this.in_id.Size = new System.Drawing.Size(257, 24);
             this.in_id.TabIndex = 2;
             this.in_id.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.in_id.Click += new System.EventHandler(this.in_id_Click);
-            this.in_id.TextChanged += new System.EventHandler(this.in_id_TextChanged);
             this.in_id.Enter += new System.EventHandler(this.in_id_Enter);
             // 
             // phlbl
@@ -116,10 +122,11 @@
             // in_pho
             // 
             this.in_pho.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.in_pho.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.in_pho.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.in_pho.Location = new System.Drawing.Point(145, 145);
+            this.in_pho.Location = new System.Drawing.Point(145, 152);
             this.in_pho.Name = "in_pho";
-            this.in_pho.Size = new System.Drawing.Size(258, 31);
+            this.in_pho.Size = new System.Drawing.Size(258, 24);
             this.in_pho.TabIndex = 4;
             // 
             // imonth
@@ -146,7 +153,6 @@
             this.imonth.Name = "imonth";
             this.imonth.Size = new System.Drawing.Size(62, 23);
             this.imonth.TabIndex = 85;
-            this.imonth.Click += new System.EventHandler(this.imonth_Click);
             // 
             // iyear
             // 
@@ -174,7 +180,6 @@
             this.iyear.Name = "iyear";
             this.iyear.Size = new System.Drawing.Size(66, 23);
             this.iyear.TabIndex = 86;
-            this.iyear.Click += new System.EventHandler(this.iyear_Click);
             // 
             // iday
             // 
@@ -219,7 +224,6 @@
             this.iday.Name = "iday";
             this.iday.Size = new System.Drawing.Size(60, 23);
             this.iday.TabIndex = 87;
-            this.iday.Click += new System.EventHandler(this.iday_Click);
             // 
             // sdatelbl
             // 
@@ -232,16 +236,6 @@
             this.sdatelbl.Size = new System.Drawing.Size(148, 35);
             this.sdatelbl.TabIndex = 91;
             this.sdatelbl.Text = "Start date : ";
-            // 
-            // pricetxt
-            // 
-            this.pricetxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pricetxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pricetxt.Location = new System.Drawing.Point(640, 12);
-            this.pricetxt.Name = "pricetxt";
-            this.pricetxt.Size = new System.Drawing.Size(143, 31);
-            this.pricetxt.TabIndex = 92;
-            this.pricetxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox1
             // 
@@ -259,7 +253,6 @@
             this.groupBox1.TabIndex = 93;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Length";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // isna
             // 
@@ -272,6 +265,7 @@
             this.isna.TabStop = true;
             this.isna.Text = "1 year";
             this.isna.UseVisualStyleBackColor = true;
+            this.isna.CheckedChanged += new System.EventHandler(this.isna_CheckedChanged);
             // 
             // i6shr
             // 
@@ -284,6 +278,7 @@
             this.i6shr.TabStop = true;
             this.i6shr.Text = "6 months";
             this.i6shr.UseVisualStyleBackColor = true;
+            this.i6shr.CheckedChanged += new System.EventHandler(this.i6shr_CheckedChanged);
             // 
             // i3shr
             // 
@@ -296,6 +291,7 @@
             this.i3shr.TabStop = true;
             this.i3shr.Text = "3 months";
             this.i3shr.UseVisualStyleBackColor = true;
+            this.i3shr.CheckedChanged += new System.EventHandler(this.i3shr_CheckedChanged);
             // 
             // ishr
             // 
@@ -308,18 +304,20 @@
             this.ishr.TabStop = true;
             this.ishr.Text = "1 month";
             this.ishr.UseVisualStyleBackColor = true;
-            this.ishr.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.ishr.CheckedChanged += new System.EventHandler(this.ishr_CheckedChanged);
             // 
             // calcbtn
             // 
             this.calcbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.calcbtn.BackColor = System.Drawing.Color.Yellow;
+            this.calcbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.calcbtn.FlatAppearance.BorderColor = System.Drawing.Color.OldLace;
             this.calcbtn.FlatAppearance.BorderSize = 3;
             this.calcbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
             this.calcbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
+            this.calcbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calcbtn.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calcbtn.Location = new System.Drawing.Point(670, 53);
+            this.calcbtn.Location = new System.Drawing.Point(638, 175);
             this.calcbtn.Name = "calcbtn";
             this.calcbtn.Size = new System.Drawing.Size(90, 38);
             this.calcbtn.TabIndex = 94;
@@ -331,6 +329,7 @@
             // 
             this.confirmbtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.confirmbtn.BackColor = System.Drawing.Color.Yellow;
+            this.confirmbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.confirmbtn.FlatAppearance.BorderColor = System.Drawing.Color.OldLace;
             this.confirmbtn.FlatAppearance.BorderSize = 3;
             this.confirmbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
@@ -384,6 +383,79 @@
             this.label20.Text = "Day";
             this.label20.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.OldLace;
+            this.label1.Location = new System.Drawing.Point(541, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 35);
+            this.label1.TabIndex = 96;
+            this.label1.Text = "Price: ";
+            // 
+            // paid_txt
+            // 
+            this.paid_txt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.paid_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.paid_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paid_txt.Location = new System.Drawing.Point(616, 91);
+            this.paid_txt.Name = "paid_txt";
+            this.paid_txt.Size = new System.Drawing.Size(132, 24);
+            this.paid_txt.TabIndex = 92;
+            this.paid_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.OldLace;
+            this.label2.Location = new System.Drawing.Point(549, 88);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 35);
+            this.label2.TabIndex = 96;
+            this.label2.Text = "Paid:";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.OldLace;
+            this.label3.Location = new System.Drawing.Point(483, 131);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(138, 35);
+            this.label3.TabIndex = 96;
+            this.label3.Text = "Remaining:";
+            // 
+            // pricetxt
+            // 
+            this.pricetxt.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pricetxt.BackColor = System.Drawing.Color.Transparent;
+            this.pricetxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pricetxt.ForeColor = System.Drawing.Color.OldLace;
+            this.pricetxt.Location = new System.Drawing.Point(616, 39);
+            this.pricetxt.Name = "pricetxt";
+            this.pricetxt.Size = new System.Drawing.Size(132, 35);
+            this.pricetxt.TabIndex = 97;
+            this.pricetxt.Text = "-";
+            this.pricetxt.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // remin_txt
+            // 
+            this.remin_txt.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.remin_txt.BackColor = System.Drawing.Color.Transparent;
+            this.remin_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remin_txt.ForeColor = System.Drawing.Color.OldLace;
+            this.remin_txt.Location = new System.Drawing.Point(616, 131);
+            this.remin_txt.Name = "remin_txt";
+            this.remin_txt.Size = new System.Drawing.Size(132, 35);
+            this.remin_txt.TabIndex = 98;
+            this.remin_txt.Text = "-";
+            this.remin_txt.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Add_member
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -391,11 +463,16 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(795, 456);
+            this.Controls.Add(this.remin_txt);
+            this.Controls.Add(this.pricetxt);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.confirmbtn);
             this.Controls.Add(this.calcbtn);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pricetxt);
+            this.Controls.Add(this.paid_txt);
             this.Controls.Add(this.sdatelbl);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label19);
@@ -412,7 +489,6 @@
             this.Name = "Add_member";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_member";
-            this.Load += new System.EventHandler(this.Add_member_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -432,7 +508,6 @@
         private System.Windows.Forms.ComboBox iyear;
         private System.Windows.Forms.ComboBox iday;
         private System.Windows.Forms.Label sdatelbl;
-        private System.Windows.Forms.TextBox pricetxt;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton ishr;
         private System.Windows.Forms.RadioButton isna;
@@ -443,5 +518,11 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox paid_txt;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label pricetxt;
+        private System.Windows.Forms.Label remin_txt;
     }
 }

@@ -53,9 +53,6 @@ namespace GYM_Project
             }
         }
 
-        private void Password_txt_TextChanged(object sender, EventArgs e)
-        {
 
-        }
     }
 }

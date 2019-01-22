@@ -20,31 +20,28 @@ namespace GYM_Project
     {
         public string M_ID { get; set; }
         public string M_Name { get; set; }
-        public Date Expir { get; set; }
-        public int Start_day { get; set; }
-        public int Start_mon { get; set; }
-        public int Start_year { get; set; }
-        public string Phone { get; set; }
         public int Freeze { get; set; }
         public int Invitation { get; set; }
-        public string end_date { get; set; }
-        public string end_date_outfreeze { get; set; }
+        public int remaind { get; set; }
+        public int paid { get; set; }
 
-        public SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-IAQJRV6\SQLEXPRESS;Initial Catalog=Gym_;Integrated Security=True");
+        public SqlConnection con = new SqlConnection(@"Data Source=YOUSEF\SQLEXPRESS;Initial Catalog=Gym_;Integrated Security=True");
         SqlCommand cmd;
         public void Insert_new(string insert_name, string Term, int Start_day, int Start_mon, int Start_year, String phone, string ed)//Collectes & Inserts Data Into DB
         {
             Add_member add = new Add_member();
             Freeze = Add_member.f;
             Invitation = Add_member.invite;
+            remaind = Convert.ToInt16(Add_member.remind_tmp);
+            paid = Convert.ToInt16(Add_member.paid_tmp);
             DialogResult result = MessageBox.Show("Do you want to confirm your subscription for Mr:" + insert_name + " ??", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                cmd = new SqlCommand("DECLARE @maxVal INT SELECT @maxVal = ISNULL(max(ID),999) from member  DBCC CHECKIDENT('member', RESEED, @maxVal)    insert into member(Name,Term,Phone,Start_day,Start_month,Start_year,end_date_outfreeze,Freeze,invite,count)values (N'" + insert_name + "',N'" + Term + "',N'" + phone + "','" + Start_day + "','" + Start_mon + "','" + Start_year + "','" + ed + "','" + Freeze + "','" + Invitation + "','" + Add_member.count + "')", con);
+                cmd = new SqlCommand("DECLARE @maxVal INT SELECT @maxVal = ISNULL(max(ID),999) from member  DBCC CHECKIDENT('member', RESEED, @maxVal)    insert into member(Name,Term,Phone,Start_day,Start_month,Start_year,end_date_outfreeze,Freeze,invite,count,Remaind,Last_paid)values (N'" + insert_name + "',N'" + Term + "',N'" + phone + "','" + Start_day + "','" + Start_mon + "','" + Start_year + "','" + ed + "','" + Freeze + "','" + Invitation + "','" + Add_member.count + "','" + remaind + "','" + paid + "')", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
-                MessageBox.Show("Data is recorded for Mr : " + insert_name + "\nEnd date is : " + ed + "\nInvitaions : " + Invitation + "\nFreeze : " + Freeze, "Done :)", MessageBoxButtons.OK);
+                MessageBox.Show("Data is recorded for Mr : " + insert_name + "\nEnd date is : " + ed + "\nInvitaions : " + Invitation + "\nFreeze : " + Freeze + "\nPaid Amount: " + paid + "\nRemaining Amount: " + remaind, "Done :)", MessageBoxButtons.OK);
             }
         }
         public bool Check_exist(int Id)
@@ -157,27 +154,16 @@ namespace GYM_Project
             while (dr.Read())
             {
                 //Here we are putting data readed from DB into the members of the class to call it in the search form
-                m_id = dr["ID"].ToString();
-                m_name = dr["Name"].ToString();
+                M_ID = dr["ID"].ToString();
+                M_Name = dr["Name"].ToString();
                 num_invit = dr["Freeze"].ToString();
                 num_freez = dr["invite"].ToString();
-                M_ID = m_id;
-                M_Name = m_name;
                 Freeze = Convert.ToInt32(num_invit);
                 Invitation = Convert.ToInt32(num_freez);
+                remaind = Convert.ToInt32(dr["Remaind"].ToString());
+                paid = Convert.ToInt32(dr["Last_paid"].ToString());
 
             }
-
-
-            //else
-            //{
-            //    textBox1.Text = "";
-            //    textBox2.Text = "";
-            //    textBox3.Text = "";
-            //    textBox4.Text = "";
-            //    textBox5.Text = "";
-            //    MessageBox.Show("Member Not Found", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
             dr.Close();
             con.Close();
         }
@@ -185,42 +171,32 @@ namespace GYM_Project
         {
             SqlCommand cmd;
             SqlDataReader dr;
-            //int x=Convert.ToInt32(name);
             cmd = new SqlCommand("select * from member where Name='" + name + "'", con);
             con.Open();
             dr = cmd.ExecuteReader();
             if (dr.Read())
             {
                 //Here we are putting data readed from DB into the members of the class to call it in the search form
-                m_id = dr["ID"].ToString();
-                m_name = dr["Name"].ToString();
+                M_ID = dr["ID"].ToString();
+                M_Name = dr["Name"].ToString();
                 num_invit = dr["Freeze"].ToString();
                 num_freez = dr["invite"].ToString();
-                M_ID = m_id;
-                M_Name = m_name;
                 Freeze = Convert.ToInt32(num_invit);
                 Invitation = Convert.ToInt32(num_freez);
+                remaind = Convert.ToInt32(dr["Remaind"].ToString());
+                paid = Convert.ToInt32(dr["Last_paid"].ToString());
             }
-
-
-            //else
-            //{
-            //    textBox1.Text = "";
-            //    textBox2.Text = "";
-            //    textBox3.Text = "";
-            //    textBox4.Text = "";
-            //    textBox5.Text = "";
-            //    MessageBox.Show("Member Not Found", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
             dr.Close();
             con.Close();
         }
         public void renew(int Id, String Term, String end_d, int freeze, int invite, int count)//updates the start date & the term
         {
-            cmd = new SqlCommand("Update member set Start_day='" + DateTime.Today.Day + "',Start_month='" + DateTime.Today.Month + "',Start_year='" + DateTime.Today.Year + "',Term='" + Term + "',end_date_outfreeze='" + end_d + "',Freeze='" + freeze + "',invite='" + invite + "',count='" + count + "'where ID='" + Id + "'", con);
+            remaind = Convert.ToInt16(Add_member.remind_tmp);
+            paid = Convert.ToInt16(Add_member.paid_tmp);
+            cmd = new SqlCommand("Update member set Start_day='" + DateTime.Today.Day + "',Start_month='" + DateTime.Today.Month + "',Start_year='" + DateTime.Today.Year + "',Term='" + Term + "',end_date_outfreeze='" + end_d + "',Freeze='" + freeze + "',invite='" + invite + "',count='" + count + "',Remaind='"+remaind+"', Last_paid='"+paid+"'where ID='" + Id + "'", con);
             con.Open();
             cmd.ExecuteNonQuery();
-            MessageBox.Show("\tMembership updated succesfully !\nExpire Date : " + end_d + "\nInvitaions : " + invite + "\nFreeze : " + freeze, "Done :)", MessageBoxButtons.OK);
+            MessageBox.Show("\tMembership updated succesfully !\nExpire Date: " + end_d + "\nInvitaions: " + invite + "\nFreeze: " + freeze + "\nPaid Amount: " + paid + "\nRemaining Amount: "+remaind, "Done :)", MessageBoxButtons.OK);
 
             con.Close();
         }
@@ -240,14 +216,9 @@ namespace GYM_Project
                     DialogResult resu = MessageBox.Show("Do you want to freeze days to Mr  '" + name + "'  ?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                     if (resu == DialogResult.Yes)
                     {
-                        //freez -= legnth;
-                        //int year, month, day = Convert.ToInt32(RD["End_day"].ToString());
-                        //month = Convert.ToInt32(RD["End_month"].ToString());
-                        //year = Convert.ToInt32(RD["End_year"].ToString());
                         string[] format = { "yyyy-MM-dd" };
                         DateTime Sdate;
                         DateTime.TryParseExact(RD["end_date_outfreeze"].ToString(), format, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out Sdate);
-                        // DateTime Sdate =D;
                         TimeSpan Sp = TimeSpan.FromDays(legnth);
                         DateTime Edate = Sdate.Add(Sp);
                         string freez_date = Edate.ToShortDateString();
@@ -297,7 +268,7 @@ namespace GYM_Project
                 }
             }
         }
-        public void invite(int idd)//updates the number of invitations  **(this function may be removed)**
+        public void invite(int idd)//updates the number of invitations
         {
             string name;
             int count_inv;
@@ -331,37 +302,19 @@ namespace GYM_Project
         }
         public void delete(int id)//deletes all information of the member
         {
-            DialogResult del = MessageBox.Show("Are you Sure you want to delete the:'" + id + "'", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (del == DialogResult.Yes)
-            {
                 con.Open();
-
                 SqlCommand cmd = new SqlCommand("DELETE FROM member where ID='" + id + "' ", con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("the Memmber deleted Successfully!");
-
                 con.Close();
-            }
-
-
         }
         public void delete_name(string name)//deletes all information of the member
         {
-            DialogResult del = MessageBox.Show("Are you Sure you want to delete the:'" + name + "'", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (del == DialogResult.Yes)
-            {
                 con.Open();
-
                 SqlCommand cmd = new SqlCommand("DELETE FROM member where Name='" + name + "' ", con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("the Member deleted Successfully!");
-
                 con.Close();
-            }
-
-
         }
         public bool check_admin(string name, string pass)
         {

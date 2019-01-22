@@ -54,7 +54,6 @@
             this.Password_txt.PasswordChar = '*';
             this.Password_txt.Size = new System.Drawing.Size(190, 24);
             this.Password_txt.TabIndex = 1;
-            this.Password_txt.TextChanged += new System.EventHandler(this.Password_txt_TextChanged);
             this.Password_txt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Password_txt_KeyDown);
             // 
             // username_lbl
@@ -90,7 +89,7 @@
             this.Admin_Login_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
             this.Admin_Login_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Admin_Login_btn.Font = new System.Drawing.Font("Tahoma", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Admin_Login_btn.Location = new System.Drawing.Point(151, 132);
+            this.Admin_Login_btn.Location = new System.Drawing.Point(171, 136);
             this.Admin_Login_btn.Name = "Admin_Login_btn";
             this.Admin_Login_btn.Size = new System.Drawing.Size(118, 42);
             this.Admin_Login_btn.TabIndex = 4;
@@ -115,7 +114,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(498, 308);
+            this.ClientSize = new System.Drawing.Size(498, 249);
             this.Controls.Add(this.Wrong_lbl);
             this.Controls.Add(this.Admin_Login_btn);
             this.Controls.Add(this.password_lbl);

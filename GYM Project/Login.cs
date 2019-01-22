@@ -25,6 +25,7 @@ namespace GYM_Project
                 Member m = new Member();
                 m.Check(Convert.ToInt32(ID_txt.Text));
             }
+            ID_txt.Clear();
         }
 
         private void Login_Load(object sender, EventArgs e)
