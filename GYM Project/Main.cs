@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -75,6 +76,14 @@ namespace GYM_Project
                 i=0;
             }
                
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=YOUSEF\SQLEXPRESS; Integrated Security=True;Initial Catalog= Gym_");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("USE sports;BACKUP DATABASE Gym_ TO DISK = 'E:\\Gym_.Bak' ", con);
+            cmd.ExecuteNonQuery();
         }
 
     }
