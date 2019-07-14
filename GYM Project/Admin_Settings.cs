@@ -30,11 +30,11 @@ namespace GYM_Project
             }
             else
             {
-                cmd = new SqlCommand("Update Price set Price_1Y='" + Year_txt.Text + "', Price_6M='" + Six_M_txt.Text + "', Price_3M='" + three_M_txt.Text + "', Price_1M='" + one_M_txt.Text + "',freeze_Y='" + frez_y.Text + "',freeze_6M='" + frez_6M.Text + "',freeze_3M='" +frez_3M.Text+ "',freeze_1M='"+frez_1M.Text+"'where ID='" + 1 + "'", M.con);
-            M.con.Open();
+                cmd = new SqlCommand("Update Price set Price_1Y='" + Year_txt.Text + "', Price_6M='" + Six_M_txt.Text + "', Price_3M='" + three_M_txt.Text + "', Price_1M='" + one_M_txt.Text + "',freeze_Y='" + frez_y.Text + "',freeze_6M='" + frez_6M.Text + "',freeze_3M='" +frez_3M.Text+ "',freeze_1M='"+frez_1M.Text+"'where ID='" + 1 + "'", Member.con);
+            Member.con.Open();
             cmd.ExecuteNonQuery();
                 MessageBox.Show("All settings are updated :)");
-            M.con.Close();
+            Member.con.Close();
             Main F = new Main();
             F.Show();
             ParentForm.Hide();
@@ -43,8 +43,8 @@ namespace GYM_Project
 
         private void Admin_Settings_Load(object sender, EventArgs e)
         {   
-            cmd = new SqlCommand("select *from Price",M.con);
-            M.con.Open();
+            cmd = new SqlCommand("select *from Price",Member.con);
+            Member.con.Open();
             rd = cmd.ExecuteReader();
             if (rd.Read())
             {
@@ -58,7 +58,7 @@ namespace GYM_Project
                 frez_1M.Text = rd.GetSqlInt32(8).ToString();
             }
             rd.Close();
-            M.con.Close();
+            Member.con.Close();
             
         }
 

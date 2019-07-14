@@ -80,9 +80,8 @@ namespace GYM_Project
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=yousef\YOUSEF; Integrated Security=True;Initial Catalog= Gym_");
-            con.Open();
-            SqlCommand cmd = new SqlCommand("USE Gym_;BACKUP DATABASE Gym_ TO DISK = 'E:\\Gym_.Bak' ", con);
+            Member.con.Open();
+            SqlCommand cmd = new SqlCommand("USE Gym_;BACKUP DATABASE Gym_ TO DISK = 'E:\\Gym_.Bak' ",Member.con);
             cmd.ExecuteNonQuery();
         }
 

@@ -113,8 +113,8 @@ namespace GYM_Project
             string start;
             flowLayoutPanel1.Controls.Clear();
             flowLayoutPanel1.Controls.Add(panel2);
-            cmd = new SqlCommand("Select * from member", M.con);
-            M.con.Open();
+            cmd = new SqlCommand("Select * from member", Member.con);
+            Member.con.Open();
            dr = cmd.ExecuteReader();
             while (dr.Read())
             {
@@ -126,7 +126,7 @@ namespace GYM_Project
                 flowLayoutPanel1.Controls.Add(us);
             }
             dr.Close();
-            M.con.Close();
+            Member.con.Close();
         }
 
         private void conusers_btn_Click(object sender, EventArgs e)
@@ -135,8 +135,8 @@ namespace GYM_Project
             flowLayoutPanel1.Controls.Clear();
             flowLayoutPanel1.Controls.Add(panel2);
 
-            cmd = new SqlCommand("Select * from member", M.con);
-            M.con.Open();
+            cmd = new SqlCommand("Select * from member", Member.con);
+            Member.con.Open();
             dr = cmd.ExecuteReader();
             while (dr.Read())
             {
@@ -154,7 +154,7 @@ namespace GYM_Project
                 }
             }
             dr.Close();
-            M.con.Close();
+            Member.con.Close();
         }
 
         private void endedusers_btn_Click(object sender, EventArgs e)
@@ -163,8 +163,8 @@ namespace GYM_Project
             string start;
             flowLayoutPanel1.Controls.Clear();
             flowLayoutPanel1.Controls.Add(panel2);
-            cmd = new SqlCommand("Select * from member", M.con);
-            M.con.Open();
+            cmd = new SqlCommand("Select * from member", Member.con);
+            Member.con.Open();
             dr = cmd.ExecuteReader();
             while (dr.Read())
             {
@@ -184,7 +184,7 @@ namespace GYM_Project
                     }    
             }
             dr.Close();
-            M.con.Close();
+            Member.con.Close();
 
         }
 
@@ -220,21 +220,21 @@ namespace GYM_Project
                 }
                 else
                 {
-                    cmd = new SqlCommand("Select ID from member where Name ='" + search_txt.Text + "' ", M.con);
-                    M.con.Open();
+                    cmd = new SqlCommand("Select ID from member where Name ='" + search_txt.Text + "' ", Member.con);
+                    Member.con.Open();
                     dr = cmd.ExecuteReader();
                     if (M.Check_exist_name(search_txt.Text))
                         if (dr.Read())
                             M_ID = Convert.ToInt16(dr.ToString());
-                    M.con.Close();
+                    Member.con.Close();
                 }
-                cmd = new SqlCommand("Update member set Last_paid='" + Convert.ToInt16(paid_txt.Text) + "', Remaind='" + Convert.ToInt16(remin_txt.Text) + "' where ID='" + M_ID + "'", M.con);
-                M.con.Open();
+                cmd = new SqlCommand("Update member set Last_paid='" + Convert.ToInt16(paid_txt.Text) + "', Remaind='" + Convert.ToInt16(remin_txt.Text) + "' where ID='" + M_ID + "'", Member.con);
+                Member.con.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Debt paid successfully!", "Done :)", MessageBoxButtons.OK);
                 repay_box.Hide();
                 paid_txt.Clear();
-                M.con.Close();
+                Member.con.Close();
             }
         }
 

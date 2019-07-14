@@ -15,8 +15,8 @@ namespace GYM_Project
     {
         public string return_price(string period)
         {
-            cmd = new SqlCommand("select *from Price", M.con);
-            M.con.Open();
+            cmd = new SqlCommand("select *from Price", Member.con);
+            Member.con.Open();
             RD = cmd.ExecuteReader();
             if (RD.Read())
             {
@@ -38,7 +38,7 @@ namespace GYM_Project
                 }
             }
             RD.Close();
-            M.con.Close();
+            Member.con.Close();
             return period;
         }
         public Add_member()
@@ -54,8 +54,6 @@ namespace GYM_Project
         public static int id;
         public static string phone;
         Member M = new Member();
-        
-        //public SqlConnection con = new SqlConnection(@"Data Source=YOUSEF\SQLEXPRESS;Initial Catalog=Gym_;Integrated Security=True");
         SqlCommand cmd;
         SqlDataReader RD;
         private void calcbtn_Click(object sender, EventArgs e)
@@ -123,8 +121,8 @@ namespace GYM_Project
         private void button1_Click(object sender, EventArgs e)
         {
             int freeze_sna=0; int freeze_6=0; int freeze_3=0; int freeze_1=0;      
-            cmd = new SqlCommand("select *from Price", M.con);
-            M.con.Open();
+            cmd = new SqlCommand("select *from Price", Member.con);
+            Member.con.Open();
             RD = cmd.ExecuteReader();
             while (RD.Read())
             {
@@ -134,7 +132,7 @@ namespace GYM_Project
                 freeze_1 = RD.GetInt32(8);
             }
             RD.Close();
-            M.con.Close();
+            Member.con.Close();
 
 
 
@@ -200,8 +198,8 @@ namespace GYM_Project
         {
             MAX = 0;
             int g;
-            M.con.Open();
-            cmd = new SqlCommand("Select ID from member", M.con);
+            Member.con.Open();
+            cmd = new SqlCommand("Select ID from member", Member.con);
             RD = cmd.ExecuteReader();
 
             while (RD.Read())
@@ -213,7 +211,7 @@ namespace GYM_Project
 
 
             RD.Close();
-             M.con.Close();
+             Member.con.Close();
             if (MAX == 0)
             { in_id.Text = "1000"; }
             else
@@ -223,8 +221,8 @@ namespace GYM_Project
         {
             MAX = 0;
             int g;
-            M.con.Open();
-             cmd = new SqlCommand("Select ID from member", M.con);
+            Member.con.Open();
+             cmd = new SqlCommand("Select ID from member", Member.con);
              RD = cmd.ExecuteReader();
 
             while (RD.Read())
@@ -236,7 +234,7 @@ namespace GYM_Project
 
 
             RD.Close();
-            M.con.Close();
+            Member.con.Close();
             if (MAX == 0)
             { in_id.Text = "1000"; }
             else

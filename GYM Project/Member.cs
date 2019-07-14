@@ -25,8 +25,9 @@ namespace GYM_Project
         public int remaind { get; set; }
         public int paid { get; set; }
 
-        public SqlConnection con = new SqlConnection(@"Data Source=yousef\YOUSEF;Initial Catalog=Gym_;Integrated Security=True");
-        SqlCommand cmd;
+ 
+        public static SqlConnection con = new SqlConnection(@"Data Source=yousef\YOUSEF;Initial Catalog=Gym_;Integrated Security=True");
+		SqlCommand cmd;
         public void Insert_new(string insert_name, string Term, int Start_day, int Start_mon, int Start_year, String phone, string ed)//Collectes & Inserts Data Into DB
         {
             Add_member add = new Add_member();

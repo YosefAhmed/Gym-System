@@ -86,8 +86,8 @@ namespace GYM_Project
             else
             {     
 
-                cmd = new SqlCommand("select *from Price", M.con);
-                M.con.Open();
+                cmd = new SqlCommand("select *from Price", Member.con);
+                Member.con.Open();
                 rd = cmd.ExecuteReader();
                 while (rd.Read())
                 {
@@ -97,7 +97,7 @@ namespace GYM_Project
                     freeze_1 = rd.GetInt32(8);
                 }
                 rd.Close();
-                M.con.Close();
+                Member.con.Close();
 
                 calc_renew(DateTime.Today.Day.ToString(), DateTime.Today.Month, DateTime.Today.Year.ToString());
                 if (ishr.Checked == true)
