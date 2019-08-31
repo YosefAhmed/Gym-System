@@ -1,5 +1,0 @@
-------Edit in DB:
-1- in the table 'member':
-	.New coulmns 'Last_paid' & 'Remaind' with data type int
-2- in the table 'Price':
-	.New coulmns 'freeze_Y'&'freeze_6M'&'freeze_3M'&'freeze_1M' with data type int

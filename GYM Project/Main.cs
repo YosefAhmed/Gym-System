@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,7 +22,7 @@ namespace GYM_Project
         {
            main_Form1.Size = new Size(1366, 650);
           enter_pass1.Size = new Size(1366, 650);
-           Back_btn.Size = new Size(100, 40);
+           //Back_btn.Size = new Size(100, 40);
            admin_Settings1.Size = new Size(1366, 650);
            main_Form1.new_btn.Location = new Point(270, 358);
            main_Form1.Search_btn.Location = new Point(900, 358);
@@ -34,7 +33,7 @@ namespace GYM_Project
         {
             main_Form1.Size = new Size  (814, 369);
             enter_pass1.Size = new Size(814, 360);
-            Back_btn.Size = new Size(89, 35);
+            //Back_btn.Size = new Size(89, 35);
             admin_Settings1.Size = new Size(814, 355);
            main_Form1.new_btn.Location = new Point(54, 208);
            main_Form1.Search_btn.Location = new Point(565, 208);
@@ -57,8 +56,6 @@ namespace GYM_Project
         {
             this.main_Form1.Show();
             this.Settings_btn.Show();
-            enter_pass1.pass_txt.Text = null;
-            enter_pass1.username_txt.Text = null;
         }
 
 
@@ -78,12 +75,14 @@ namespace GYM_Project
                
         }
 
-        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        private void Main_Load(object sender, EventArgs e)
         {
-            Member.con.Open();
-            SqlCommand cmd = new SqlCommand("USE Gym_;BACKUP DATABASE Gym_ TO DISK = 'E:\\Gym_.Bak' ",Member.con);
-            cmd.ExecuteNonQuery();
+
         }
 
+        private void main_Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

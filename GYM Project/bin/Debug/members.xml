@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ArrayOfCustomer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <customer>
+    <id>100</id>
+    <name>sdafas</name>
+    <start_date>2027-6-25</start_date>
+    <end_date>2027-09-23</end_date>
+    <phone>01141931205</phone>
+    <term>3 months</term>
+  </customer>
+</ArrayOfCustomer>

@@ -57,12 +57,6 @@
     <Compile Include="Add_member.Designer.cs">
       <DependentUpon>Add_member.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin_accounts.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin_accounts.Designer.cs">
-      <DependentUpon>Admin_accounts.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +69,7 @@
     <Compile Include="Admin_Settings.Designer.cs">
       <DependentUpon>Admin_Settings.cs</DependentUpon>
     </Compile>
+    <Compile Include="customer.cs" />
     <Compile Include="Enter_pass.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -133,9 +128,6 @@
     </Compile>
     <EmbeddedResource Include="Add_member.resx">
       <DependentUpon>Add_member.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin_accounts.resx">
-      <DependentUpon>Admin_accounts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_Login.resx">
       <DependentUpon>Admin_Login.cs</DependentUpon>

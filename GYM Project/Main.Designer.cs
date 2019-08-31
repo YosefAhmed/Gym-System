@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.Settings_btn = new System.Windows.Forms.Button();
-            this.Back_btn = new System.Windows.Forms.Button();
             this.main_Form1 = new GYM_Project.Main_Form();
             this.enter_pass1 = new GYM_Project.Enter_pass();
             this.admin_Settings1 = new GYM_Project.Admin_Settings();
+            this.Back_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Settings_btn
@@ -53,34 +53,17 @@
             this.Settings_btn.UseVisualStyleBackColor = false;
             this.Settings_btn.Click += new System.EventHandler(this.Settings_btn_Click);
             // 
-            // Back_btn
-            // 
-            this.Back_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Back_btn.BackColor = System.Drawing.Color.Yellow;
-            this.Back_btn.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
-            this.Back_btn.FlatAppearance.BorderSize = 3;
-            this.Back_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
-            this.Back_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
-            this.Back_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Back_btn.Font = new System.Drawing.Font("Tahoma", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Back_btn.Location = new System.Drawing.Point(678, 36);
-            this.Back_btn.Name = "Back_btn";
-            this.Back_btn.Size = new System.Drawing.Size(89, 35);
-            this.Back_btn.TabIndex = 9;
-            this.Back_btn.Text = "Back";
-            this.Back_btn.UseVisualStyleBackColor = false;
-            this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
-            // 
             // main_Form1
             // 
             this.main_Form1.BackColor = System.Drawing.Color.Black;
             this.main_Form1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("main_Form1.BackgroundImage")));
             this.main_Form1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.main_Form1.Location = new System.Drawing.Point(0, -1);
+            this.main_Form1.Location = new System.Drawing.Point(0, 0);
             this.main_Form1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.main_Form1.Name = "main_Form1";
-            this.main_Form1.Size = new System.Drawing.Size(814, 369);
+            this.main_Form1.Size = new System.Drawing.Size(952, 369);
             this.main_Form1.TabIndex = 4;
+            this.main_Form1.Load += new System.EventHandler(this.main_Form1_Load);
             // 
             // enter_pass1
             // 
@@ -104,6 +87,24 @@
             this.admin_Settings1.Size = new System.Drawing.Size(814, 355);
             this.admin_Settings1.TabIndex = 3;
             // 
+            // Back_btn
+            // 
+            this.Back_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Back_btn.BackColor = System.Drawing.Color.Yellow;
+            this.Back_btn.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
+            this.Back_btn.FlatAppearance.BorderSize = 3;
+            this.Back_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
+            this.Back_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
+            this.Back_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Back_btn.Font = new System.Drawing.Font("Tahoma", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Back_btn.Location = new System.Drawing.Point(802, 28);
+            this.Back_btn.Name = "Back_btn";
+            this.Back_btn.Size = new System.Drawing.Size(89, 35);
+            this.Back_btn.TabIndex = 9;
+            this.Back_btn.Text = "Back";
+            this.Back_btn.UseVisualStyleBackColor = false;
+            this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -111,20 +112,20 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(814, 421);
+            this.ClientSize = new System.Drawing.Size(949, 482);
             this.Controls.Add(this.Settings_btn);
             this.Controls.Add(this.main_Form1);
-            this.Controls.Add(this.Back_btn);
             this.Controls.Add(this.enter_pass1);
             this.Controls.Add(this.admin_Settings1);
+            this.Controls.Add(this.Back_btn);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+            this.Load += new System.EventHandler(this.Main_Load);
             this.Resize += new System.EventHandler(this.Main_Resize);
             this.ResumeLayout(false);
 
@@ -136,7 +137,7 @@
         private Main_Form main_Form1;
         private System.Windows.Forms.Button Settings_btn;
         private Enter_pass enter_pass1;
-        public System.Windows.Forms.Button Back_btn;
+        private System.Windows.Forms.Button Back_btn;
     }
 }
 

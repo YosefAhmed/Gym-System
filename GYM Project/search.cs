@@ -13,13 +13,27 @@ namespace GYM_Project
 {
     public partial class search : UserControl
     {
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-5JMJ2DN\SQLEXPRESS;Initial Catalog=test 1 gym;Integrated Security=True");
+        SqlDataAdapter Da;
+        DataSet Ds = new DataSet();
+        SqlCommand cmd;
+        SqlDataReader dr;
         public search()
         {
             InitializeComponent();
         }
+       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+       
+        }
 
         private void search_Load(object sender, EventArgs e)
         {
+            
+            Member m = new Member();
+            
         }
     }
 }

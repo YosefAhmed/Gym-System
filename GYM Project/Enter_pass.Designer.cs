@@ -28,23 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.username_txt = new System.Windows.Forms.TextBox();
             this.Enter_pass_lbl = new System.Windows.Forms.Label();
             this.pass_txt = new System.Windows.Forms.TextBox();
             this.OK_btn = new System.Windows.Forms.Button();
+            this.username_txt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Error_msg_lbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // username_txt
-            // 
-            this.username_txt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.username_txt.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username_txt.Location = new System.Drawing.Point(327, 116);
-            this.username_txt.Name = "username_txt";
-            this.username_txt.Size = new System.Drawing.Size(235, 27);
-            this.username_txt.TabIndex = 1;
-            this.username_txt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.username_txt_KeyDown);
             // 
             // Enter_pass_lbl
             // 
@@ -85,6 +76,16 @@
             this.OK_btn.Text = "OK";
             this.OK_btn.UseVisualStyleBackColor = false;
             this.OK_btn.Click += new System.EventHandler(this.OK_btn_Click);
+            // 
+            // username_txt
+            // 
+            this.username_txt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.username_txt.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username_txt.Location = new System.Drawing.Point(327, 116);
+            this.username_txt.Name = "username_txt";
+            this.username_txt.Size = new System.Drawing.Size(235, 27);
+            this.username_txt.TabIndex = 1;
+            this.username_txt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.username_txt_KeyDown);
             // 
             // label1
             // 
@@ -143,13 +144,12 @@
 
         #endregion
 
-        public System.Windows.Forms.TextBox username_txt;
         private System.Windows.Forms.Label Enter_pass_lbl;
+        private System.Windows.Forms.TextBox pass_txt;
         private System.Windows.Forms.Button OK_btn;
+        private System.Windows.Forms.TextBox username_txt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Error_msg_lbl;
-        public System.Windows.Forms.TextBox pass_txt;
-        
     }
 }

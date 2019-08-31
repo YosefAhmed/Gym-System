@@ -16,7 +16,7 @@ namespace GYM_Project
         {
             InitializeComponent();
         }
-        public void put(string id,string name, string term,string phone, string sdate, string edate, string fr, string inv,string cou, string paid, string remind)
+        public void put(string id,string name, string term,string phone, string sdate, string edate, string fr, string inv,string cou)
         {
             idlbl.Text = id;
             namelbl.Text = name;
@@ -27,8 +27,6 @@ namespace GYM_Project
             flbl.Text = fr;
             ilbl.Text = inv;
             clbl.Text = cou;
-            paid_lbl.Text = paid;
-            remind_lbl.Text = remind;
 
 
         }
