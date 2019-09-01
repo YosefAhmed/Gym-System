@@ -152,3 +152,24 @@ D:\My CV\Projects\oct gym with my server\Gym-System-master\GYM Project\obj\Debug
 D:\My CV\Projects\oct gym with my server\Gym-System-master\GYM Project\bin\Debug\GYM Project.exe.config
 D:\My CV\Projects\oct gym with my server\Gym-System-master\GYM Project\bin\Debug\GYM Project.exe
 D:\My CV\Projects\oct gym with my server\Gym-System-master\GYM Project\bin\Debug\GYM Project.pdb
+F:\projects\GYM System\GYM Project\GYM Project\bin\Debug\GYM Project.exe.config
+F:\projects\GYM System\GYM Project\GYM Project\bin\Debug\GYM Project.exe
+F:\projects\GYM System\GYM Project\GYM Project\bin\Debug\GYM Project.pdb
+F:\projects\GYM System\GYM Project\GYM Project\obj\Debug\GYM Project.csprojAssemblyReference.cache
+F:\projects\GYM System\GYM Project\GYM Project\obj\Debug\GYM_Project.Add_member.resources
+F:\projects\GYM System\GYM Project\GYM Project\obj\Debug\GYM_Project.Admin_Login.resources
+F:\projects\GYM System\GYM Project\GYM Project\obj\Debug\GYM_Project.Admin_Settings.resources
+F:\projects\GYM System\GYM Project\GYM Project\obj\Debug\GYM_Project.Enter_pass.resources
+F:\projects\GYM System\GYM Project\GYM Project\obj\Debug\GYM_Project.Main.resources
+F:\projects\GYM System\GYM Project\GYM Project\obj\Debug\GYM_Project.Login.resources
+F:\projects\GYM System\GYM Project\GYM Project\obj\Debug\GYM_Project.Main_Form.resources
+F:\projects\GYM System\GYM Project\GYM Project\obj\Debug\GYM_Project.Properties.Resources.resources
+F:\projects\GYM System\GYM Project\GYM Project\obj\Debug\GYM_Project.Record.resources
+F:\projects\GYM System\GYM Project\GYM Project\obj\Debug\GYM_Project.Renewform.resources
+F:\projects\GYM System\GYM Project\GYM Project\obj\Debug\GYM_Project.search.resources
+F:\projects\GYM System\GYM Project\GYM Project\obj\Debug\GYM_Project.Search_Form.resources
+F:\projects\GYM System\GYM Project\GYM Project\obj\Debug\GYM Project.csproj.GenerateResource.cache
+F:\projects\GYM System\GYM Project\GYM Project\obj\Debug\GYM Project.csproj.CoreCompileInputs.cache
+F:\projects\GYM System\GYM Project\GYM Project\obj\Debug\GYM Project.csproj.CopyComplete
+F:\projects\GYM System\GYM Project\GYM Project\obj\Debug\GYM Project.exe
+F:\projects\GYM System\GYM Project\GYM Project\obj\Debug\GYM Project.pdb

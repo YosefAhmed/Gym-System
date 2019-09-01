@@ -75,40 +75,42 @@ namespace GYM_Project
         public static int f;
         public static int invite;
         public static int count;
-        private void confirmbtn_Click(object sender, EventArgs e)
-        {
-            calc_renew(DateTime.Today.Day.ToString(),DateTime.Today.Month, DateTime.Today.Year.ToString());
-            if (ishr.Checked == true)
-            {
-                term = ishr.Text;
-                f = 0;
-                invite = 0;
-                count = 30;
-            }
-            else if (i3shr.Checked == true)
-            {
-                term = i3shr.Text;
-                f = 15;
-                invite = 6;
-                count = 90;
-            }
-            else if (i6shr.Checked == true)
-            {
-                term = i6shr.Text;
-                f = 30;
-                invite = 12;
-                count = 180;
-            }
-            else if (isna.Checked == true)
-            {
-                term = isna.Text;
-                f = 60;
-                invite = 25;
-                count = 365;
-            }
-            Member me = new Member();
-            me.renew(Convert.ToInt32(in_id.Text), term, edate, f, invite, count);
-            this.Close();
-        }
-    }
+
+		private void confirmbtn_Click(object sender, EventArgs e)
+		{
+			calc_renew(DateTime.Today.Day.ToString(), DateTime.Today.Month, DateTime.Today.Year.ToString());
+			if (ishr.Checked == true)
+			{
+				term = ishr.Text;
+				f = 0;
+				invite = 0;
+				count = 30;
+			}
+			else if (i3shr.Checked == true)
+			{
+				term = i3shr.Text;
+				f = 15;
+				invite = 6;
+				count = 90;
+			}
+			else if (i6shr.Checked == true)
+			{
+				term = i6shr.Text;
+				f = 30;
+				invite = 12;
+				count = 180;
+			}
+			else if (isna.Checked == true)
+			{
+				term = isna.Text;
+				f = 60;
+				invite = 25;
+				count = 365;
+			}
+			Member me = new Member();
+			me.renew(Convert.ToInt32(in_id.Text), term, edate, f, invite, count);
+			this.Close();
+		}
+
+	}
 }

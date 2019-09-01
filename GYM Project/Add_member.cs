@@ -26,20 +26,6 @@ namespace GYM_Project
         public static int id;
         public static string phone;
 
-
-        private void Add_member_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-        }
-        private void calcbtn_Click(object sender, EventArgs e)
-        {
-            
-                
-
-        }
         public static string edate;
         public void calc_renew(string day, int mon, string year)//calc end date with freeze
         {
@@ -138,41 +124,13 @@ namespace GYM_Project
                 this.Close();
             }
         }
-            private void iyear_Click(object sender, EventArgs e)
-            {
-                
-            }
-
-            private void imonth_Click(object sender, EventArgs e)
-            {
-                
-            }
-
-            private void iday_Click(object sender, EventArgs e)
-            {
-                
-            }
+      
         
         private void in_id_Click(object sender, EventArgs e)
         {
             Member.GetMembers();
             in_id.Text = (Member.membersdata.Count+100).ToString();
         }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void in_id_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void in_id_Enter(object sender, EventArgs e)
-        {
-           
-        }
-    }
+	}
     }
 
